@@ -1,0 +1,112 @@
+DEBT DESTROYER - MONTHLY REPORT
+Generated: February 12, 2026
+============================================================
+
+SUMMARY
+------------------------------------------------------------
+Total Debt: [32m$96,965.33[39m
+Monthly Income: [32m$7,137.00[39m
+Number of Debts: 6
+Number of Bills: 23
+
+DEBTS (KILL CHASE FIRST PRIORITY ORDER)
+------------------------------------------------------------
+1. Chase CC
+   Balance: [32m$11,887.24[39m
+   APR: 26.49%
+   Min Payment: [32m$600.00[39m
+   Due: 26
+
+2. OnPoint CC
+   Balance: [32m$6,078.09[39m
+   APR: 15.25%
+   Min Payment: [32m$124.00[39m
+   Due: 26
+
+3. Car Loan
+   Balance: [32m$15,000.00[39m
+   APR: 5.9%
+   Min Payment: [32m$256.00[39m
+   Due: 18
+
+4. Mom Loan
+   Balance: [32m$36,000.00[39m
+   APR: 0%
+   Min Payment: [32m$1,000.00[39m
+   Due: monthly
+
+5. Lawyer Fees
+   Balance: [32m$26,000.00[39m
+   APR: 0%
+   Min Payment: [32m$500.00[39m
+   Due: monthly
+
+6. Delilah College
+   Balance: [32m$2,000.00[39m
+   APR: 0%
+   Min Payment: [32m$100.00[39m
+   Due: 8
+
+MONTHLY BILLS
+------------------------------------------------------------
+Mortgage (split 50%): [32m$1,021.00[39m (Due: 1)
+NW Natural Gas: [32m$14.00[39m (Due: 17)
+Ziply Fiber (internet): [32m$102.00[39m (Due: 17)
+AHS: [32m$34.99[39m (Due: 17)
+Verizon (cell): [32m$267.02[39m (Due: 5)
+City of Tigard: [32m$145.00[39m (Due: 15)
+PGE (electric): [32m$169.00[39m (Due: 15)
+Progressive (car/home): [32m$425.32[39m (Due: 22)
+EcoGuard (pest, split): [32m$52.00[39m (Due: 7)
+Claude AI: [32m$100.00[39m (Due: 5)
+Anthropic: [32m$25.00[39m (Due: 22)
+OpenRouter: [32m$10.80[39m (Due: 10)
+Replit: [32m$25.00[39m (Due: 28)
+Google One: [32m$2.00[39m (Due: 28)
+Audible: [32m$23.00[39m (Due: 7)
+Apple: [32m$10.00[39m (Due: 24)
+Kindle: [32m$3.00[39m (Due: 26)
+24hr Fitness: [32m$32.00[39m (Due: 13)
+Gas: [32m$50.00[39m (Due: 1)
+Food/Groceries: [32m$400.00[39m (Due: 1)
+WCS Wednesday (dance): [32m$256.00[39m (Due: 1)
+Dog Food (Farmer's Dog): [32m$107.64[39m (Due: 18)
+Federal Taxes: [32m$216.00[39m (Due: 1)
+------------------------------------------------------------
+Total Monthly Bills: [32m$3,490.77[39m
+
+MONTHLY INCOME
+------------------------------------------------------------
+Centene: [32m$7,137.00[39m
+Uber/Lyft: [32m$0.00[39m
+------------------------------------------------------------
+Total Monthly Income: [32m$7,137.00[39m
+
+CASH FLOW ANALYSIS
+------------------------------------------------------------
+Monthly Income: [32m$7,137.00[39m
+Monthly Bills: [31m-$3,490.77[39m
+Min Debt Payments: [31m-$2,580.00[39m
+Available for Payoff: [32m$1,066.23[39m
+
+INTEREST ANALYSIS
+------------------------------------------------------------
+Chase CC: [32m$262.41[39m/month
+OnPoint CC: [32m$77.24[39m/month
+Car Loan: [32m$73.75[39m/month
+Mom Loan: [32m$0.00[39m/month
+Lawyer Fees: [32m$0.00[39m/month
+Delilah College: [32m$0.00[39m/month
+------------------------------------------------------------
+Total Monthly Interest Cost: [32m$413.40[39m
+
+GOALS
+------------------------------------------------------------
+Netflix SDET 4 job application: 0% complete
+Centene full-time: 50% complete
+HugBack app launch: 60% complete
+Debt freedom: 5% complete
+Rebuild relationship with child: 40% complete
+
+============================================================
+End of Report

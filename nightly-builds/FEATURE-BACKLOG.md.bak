@@ -1,0 +1,19 @@
+# HugBack Nightly Feature Builds
+# Status: [ ] = pending, [x] = completed, [s] = skipped
+# Codex CLI picks the first [ ] task and builds it
+
+[x] 1. Hamburger menu pulse animation — Make the hamburger menu slowly flash to draw attention to navigation
+[x] 2. Interest & personality questionnaire component — React component with ~15 questions, results stored in Supabase
+[x] 3. Language toggle UI — Add language selector dropdown (Google Translate API integration ready)
+[x] 4. Mood filter component — Add filter to show matches by mood (happy, calm, anxious, sad)
+[x] 5. Basic rule-based matcher — Algorithm that matches users by distance, age range, mood, and interests
+[x] 6. User profile builder — Form to edit interests, bio, age range, location (no photos, privacy-first)
+[x] 7. Report & block functionality — Modal and DB logic for users to report or block unsafe profiles
+[x] 8. Terms of Service page — Lawyer-written ToS template (Ben to customize)
+[x] 9. Privacy Policy page — Lawyer-written Privacy Policy template (Ben to customize)
+[x] 10. Admin dashboard skeleton — Page to view user count, report counts, system health
+[x] 11. Mobile-responsive hamburger menu — Fix mobile layout, ensure all nav items accessible on small screens
+[x] 12. Affirmation notification banner — Daily rotating affirmations displayed when user logs in
+[x] 13. Onboarding flow — Guided steps for new users (sign up → questionnaire → profile → first match)
+[x] 14. Safety tips component — Prompts and tips shown throughout the app
+[x] 15. Data export feature — Allow users to download their data (GDPR/CCPA compliance)

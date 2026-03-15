@@ -1,0 +1,24 @@
+# HugBack Nightly Build Backlog
+# Status: [ ] = pending, [x] = completed, [s] = skipped
+# Claude Code picks the first [ ] task each night
+
+[x] 1. CSS variable extractor — scan all .js and .css files, find hardcoded colors/fonts, output a report of what should be design tokens
+[x] 2. Component dependency map — generate a visual map (Mermaid diagram) showing which files import which
+[x] 3. Deploy checklist script — pre-push validator that checks for console.logs, hardcoded URLs, missing env vars, and lint errors
+[x] 4. Kindness message bulk uploader — CLI tool to upload CSV of messages to Supabase kindness_messages table
+[x] 5. Supabase health check — script that checks DB connectivity, row counts per table, and last activity timestamp
+[x] 6. Accessibility audit — scan components for missing aria-labels, alt text, color contrast issues
+[ ] 7. Bundle size reporter — analyze the build output and flag large dependencies
+[ ] 8. Git commit message formatter — enforces conventional commits (feat/fix/chore) for HugBack
+[ ] 9. Mobile responsive tester — Puppeteer script that screenshots the app at 5 breakpoints
+[ ] 10. User signup funnel tracker — Supabase query that shows signup starts vs completions vs active users
+[ ] 11. Test data seeder — creates fake users, check-ins, stories, hug requests for local dev
+[ ] 12. Error log summarizer — parses Railway logs and groups errors by type/frequency
+[ ] 13. Release notes generator — reads git log since last tag and formats a changelog
+[ ] 14. Daily Supabase backup script — exports key tables to JSON files with timestamps
+[ ] 15. Performance budget checker — sets thresholds for bundle size, API response time, and alerts if exceeded
+[ ] 16. Unused code finder — detects exported functions/components that are never imported anywhere
+[ ] 17. Environment variable validator — checks .env vs .env.example and flags missing/extra vars
+[ ] 18. Inline style extractor — finds inline styles in components and suggests CSS class equivalents
+[ ] 19. API endpoint documentation generator — reads server.js and outputs a markdown API reference
+[ ] 20. Lighthouse CI script — runs Lighthouse on the deployed URL and saves scores over time

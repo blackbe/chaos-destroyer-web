@@ -1,0 +1,9 @@
+{
+  "debts": [
+    {"id": "chase-cc", "name": "Chase CC", "type": "debt", "balance": 11887.24, "minimumPayment": 600, "dueDate": "26", "apr": 26.49, "payoffPriority": 1, "notes": "TARGET", "createdAt": "2026-02-12T00:00:00Z", "updatedAt": "2026-02-12T00:00:00Z"},
+    {"id": "onpoint-cc", "name": "OnPoint CC", "type": "debt", "balance": 6078.09, "minimumPayment": 124, "dueDate": "26", "apr": 15.25, "payoffPriority": 2, "notes": "", "createdAt": "2026-02-12T00:00:00Z", "updatedAt": "2026-02-12T00:00:00Z"}
+  ],
+  "balance_check": "$96,965.33 total debt",
+  "income": "$8,087/month",
+  "breathing_room": "$2,016.23/month"
+}

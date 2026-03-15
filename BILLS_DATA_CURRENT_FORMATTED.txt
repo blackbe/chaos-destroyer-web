@@ -1,0 +1,276 @@
+{
+  "billsData": [
+    {
+      "id": "mortgage",
+      "name": "Mortgage (split 50%)",
+      "amount": 2042.09,
+      "dueDate": "1",
+      "frequency": "monthly",
+      "category": "housing",
+      "notes": "Full: $4,084.19 split with Erin. Ben pays: $2,042.09",
+      "lastPaid": "1/15/26"
+    },
+    {
+      "id": "garbage",
+      "name": "Garbage",
+      "amount": 81.20,
+      "dueDate": "1",
+      "frequency": "monthly",
+      "category": "utilities",
+      "lastPaid": "1/17/26"
+    },
+    {
+      "id": "nw-gas",
+      "name": "NW Natural Gas",
+      "amount": 261.54,
+      "dueDate": "17",
+      "frequency": "monthly",
+      "category": "utilities",
+      "notes": "Full: $523.08, Erin pays $261.54, Ben pays ~$261.54 (Ben only paid half on 1/17)",
+      "lastPaid": "1/17/26"
+    },
+    {
+      "id": "ziply-fiber",
+      "name": "Ziply Fiber (internet)",
+      "amount": 102.00,
+      "dueDate": "17",
+      "frequency": "monthly",
+      "category": "utilities",
+      "notes": "Range: $102-$105",
+      "lastPaid": "1/17/26"
+    },
+    {
+      "id": "ahs",
+      "name": "AHS",
+      "amount": 34.99,
+      "dueDate": "17",
+      "frequency": "monthly",
+      "category": "other",
+      "notes": "Range: $34.99-$38.99",
+      "lastPaid": "1/17/26"
+    },
+    {
+      "id": "verizon-cell",
+      "name": "Verizon (cell phones)",
+      "amount": 267.02,
+      "dueDate": "5",
+      "frequency": "monthly",
+      "category": "utilities",
+      "notes": "Range: $260.77-$267.02",
+      "lastPaid": "1/5/26"
+    },
+    {
+      "id": "city-tigard",
+      "name": "City of Tigard",
+      "amount": 144.60,
+      "dueDate": "3",
+      "frequency": "monthly",
+      "category": "other",
+      "lastPaid": "12/3/25"
+    },
+    {
+      "id": "pge-electric",
+      "name": "PGE (electric)",
+      "amount": 168.81,
+      "dueDate": "3",
+      "frequency": "monthly",
+      "category": "utilities",
+      "lastPaid": "12/3/25"
+    },
+    {
+      "id": "progressive",
+      "name": "Progressive (car & home insurance)",
+      "amount": 425.32,
+      "dueDate": "22",
+      "frequency": "monthly",
+      "category": "insurance",
+      "lastPaid": "1/22/26"
+    },
+    {
+      "id": "ecoguard",
+      "name": "EcoGuard (pest control)",
+      "amount": 104.00,
+      "dueDate": "7",
+      "frequency": "monthly",
+      "category": "other",
+      "notes": "Money deposited 12/18",
+      "lastPaid": "1/7/26"
+    },
+    {
+      "id": "24hr-fitness",
+      "name": "24hr Fitness",
+      "amount": 31.99,
+      "dueDate": "13",
+      "frequency": "monthly",
+      "category": "subscription",
+      "lastPaid": null
+    },
+    {
+      "id": "gas-car",
+      "name": "Gas (car)",
+      "amount": 50.00,
+      "dueDate": "1",
+      "frequency": "monthly",
+      "category": "transport",
+      "lastPaid": null
+    },
+    {
+      "id": "food",
+      "name": "Food/Groceries",
+      "amount": 400.00,
+      "dueDate": "1",
+      "frequency": "monthly",
+      "category": "food",
+      "lastPaid": null
+    },
+    {
+      "id": "wcs-wednesday",
+      "name": "WCS Wednesday (dance)",
+      "amount": 64.00,
+      "dueDate": "1",
+      "frequency": "monthly",
+      "category": "other",
+      "notes": "$64/week * 1 week estimate",
+      "lastPaid": null
+    },
+    {
+      "id": "dog-food",
+      "name": "Dog Food (Farmer's Dog)",
+      "amount": 122.64,
+      "dueDate": "15",
+      "frequency": "monthly",
+      "category": "other",
+      "notes": "$245.28 every 2 months (last paid 12/18, next payment ~2/15)",
+      "lastPaid": "12/18/25"
+    },
+    {
+      "id": "claude-ai",
+      "name": "Claude AI (subscription)",
+      "amount": 100.00,
+      "dueDate": "5",
+      "frequency": "monthly",
+      "category": "subscription",
+      "lastPaid": "2/5/26"
+    },
+    {
+      "id": "federal-taxes",
+      "name": "Federal Taxes",
+      "amount": 216.00,
+      "dueDate": "1",
+      "frequency": "monthly",
+      "category": "other",
+      "notes": "Paid as needed (~$240/month starting December)",
+      "lastPaid": "11/27/25"
+    },
+    {
+      "id": "child-support",
+      "name": "Child Support/Copay",
+      "amount": 100.00,
+      "dueDate": "11",
+      "frequency": "monthly",
+      "category": "other",
+      "notes": "Range: $100-$350, Delilah copay",
+      "lastPaid": "1/11/26"
+    },
+    {
+      "id": "college-fund",
+      "name": "College Fund (Delilah)",
+      "amount": 100.00,
+      "dueDate": "8",
+      "frequency": "monthly",
+      "category": "other",
+      "notes": "Range: $100-$346, Pay starting July",
+      "lastPaid": "1/8/26"
+    },
+    {
+      "id": "delilah-braces",
+      "name": "Delilah Braces",
+      "amount": 70.00,
+      "dueDate": "22",
+      "frequency": "one-time",
+      "category": "other",
+      "notes": "Paid 1/22/25",
+      "lastPaid": "1/22/25"
+    },
+    {
+      "id": "lawyer-fees-payment",
+      "name": "Lawyer Fees (payment)",
+      "amount": 500.00,
+      "dueDate": "monthly",
+      "frequency": "monthly",
+      "category": "debt",
+      "notes": "Monthly payment toward lawyer fees debt",
+      "lastPaid": "1/17/26"
+    }
+  ],
+  "debtData": [
+    {
+      "id": "chase-cc",
+      "name": "Chase CC",
+      "balance": 11887.24,
+      "minimumPayment": 600,
+      "dueDate": "26",
+      "apr": 26.49,
+      "payoffPriority": 1,
+      "notes": "KILL CHASE FIRST - Pause Mom, direct $1,000 to Chase",
+      "lastPaid": "12/26/25"
+    },
+    {
+      "id": "onpoint-cc",
+      "name": "OnPoint CC",
+      "balance": 6078.09,
+      "minimumPayment": 124,
+      "dueDate": "26",
+      "apr": 15.25,
+      "payoffPriority": 2,
+      "notes": "After Chase done",
+      "lastPaid": "12/26/25"
+    },
+    {
+      "id": "car-loan",
+      "name": "Car Loan",
+      "balance": 15000,
+      "minimumPayment": 256,
+      "dueDate": "18",
+      "apr": 5.9,
+      "payoffPriority": 3,
+      "notes": "MOVED UP - Kill Chase & OnPoint first",
+      "lastPaid": "12/18/25"
+    },
+    {
+      "id": "mom-loan",
+      "name": "Mom Loan",
+      "balance": 36000,
+      "minimumPayment": 1000,
+      "dueDate": "monthly",
+      "apr": 0,
+      "payoffPriority": 4,
+      "notes": "Resume after Chase & OnPoint done"
+    },
+    {
+      "id": "lawyer-fees",
+      "name": "Lawyer Fees",
+      "balance": 26737.78,
+      "minimumPayment": 500,
+      "dueDate": "monthly",
+      "apr": 6.93,
+      "payoffPriority": 5,
+      "notes": "Steady payment. APR calculated from 2/13-2/18 statements"
+    },
+    {
+      "id": "delilah-college",
+      "name": "Delilah College Fund",
+      "balance": 2000,
+      "minimumPayment": 100,
+      "dueDate": "8",
+      "apr": 0,
+      "payoffPriority": 6,
+      "notes": "Savings goal"
+    }
+  ],
+  "metadata": {
+    "lastUpdated": "2026-02-18T10:23:00Z",
+    "dataSource": "Ben's current financial snapshot",
+    "notes": "Bills data compiled from multiple sources. Some line items unclear (Andrea $500). Verify amounts before loading to web app."
+  }
+}

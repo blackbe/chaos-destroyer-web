@@ -1,0 +1,1 @@
+{ "note": "Phase summaries and decisions are written here as long-term memory. This file should be treated as a secure, private summary of important outcomes and learnings."}

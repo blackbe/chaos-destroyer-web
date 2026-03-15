@@ -1,0 +1,490 @@
+{
+  "debts": [
+    {
+      "id": "chase-cc",
+      "name": "Chase CC",
+      "type": "debt",
+      "balance": 11887.24,
+      "originalBalance": 11887.24,
+      "minimumPayment": 600,
+      "dueDate": "26",
+      "apr": 26.49,
+      "payoffPriority": 1,
+      "notes": "KILL CHASE FIRST - Pause Mom, direct $1,000 to Chase",
+      "createdAt": "2026-02-12T00:00:00Z",
+      "updatedAt": "2026-02-12T00:00:00Z"
+    },
+    {
+      "id": "onpoint-cc",
+      "name": "OnPoint CC",
+      "type": "debt",
+      "balance": 6078.09,
+      "originalBalance": 6078.09,
+      "minimumPayment": 124,
+      "dueDate": "26",
+      "apr": 15.25,
+      "payoffPriority": 2,
+      "notes": "After Chase done",
+      "createdAt": "2026-02-12T00:00:00Z",
+      "updatedAt": "2026-02-12T00:00:00Z"
+    },
+    {
+      "id": "car-loan",
+      "name": "Car Loan",
+      "type": "debt",
+      "balance": 15000,
+      "originalBalance": 15000,
+      "minimumPayment": 256,
+      "dueDate": "18",
+      "apr": 5.9,
+      "payoffPriority": 3,
+      "notes": "MOVED UP - Kill Chase & OnPoint first",
+      "createdAt": "2026-02-12T00:00:00Z",
+      "updatedAt": "2026-02-13T02:33:04.698Z"
+    },
+    {
+      "id": "mom-loan",
+      "name": "Mom Loan",
+      "type": "debt",
+      "balance": 36000,
+      "originalBalance": 36000,
+      "minimumPayment": 1000,
+      "dueDate": "monthly",
+      "apr": 0,
+      "payoffPriority": 4,
+      "notes": "Resume after Chase & OnPoint done.",
+      "createdAt": "2026-02-12T00:00:00Z",
+      "updatedAt": "2026-02-13T02:32:37.066Z"
+    },
+    {
+      "id": "lawyer-fees",
+      "name": "Lawyer Fees",
+      "type": "debt",
+      "balance": 26000,
+      "originalBalance": 26000,
+      "minimumPayment": 500,
+      "dueDate": "monthly",
+      "apr": 0,
+      "payoffPriority": 5,
+      "notes": "Steady payment",
+      "createdAt": "2026-02-12T00:00:00Z",
+      "updatedAt": "2026-02-13T02:32:11.934Z"
+    },
+    {
+      "id": "delilah-college",
+      "name": "Delilah College",
+      "type": "debt",
+      "balance": 2000,
+      "originalBalance": 2000,
+      "minimumPayment": 100,
+      "dueDate": "8",
+      "apr": 0,
+      "payoffPriority": 6,
+      "notes": "Savings goal",
+      "createdAt": "2026-02-12T00:00:00Z",
+      "updatedAt": "2026-02-13T02:33:18.315Z"
+    }
+  ],
+  "bills": [
+    {
+      "id": "mortgage",
+      "name": "Mortgage (split 50%)",
+      "amount": 2042,
+      "dueDate": "1",
+      "frequency": "monthly",
+      "category": "housing",
+      "isRecurring": true,
+      "splitAmount": 1021,
+      "notes": "Due 1/15, split with Erin",
+      "createdAt": "2026-02-12T00:00:00Z",
+      "updatedAt": "2026-02-12T00:00:00Z"
+    },
+    {
+      "id": "nw-gas",
+      "name": "NW Natural Gas",
+      "amount": 14,
+      "dueDate": "17",
+      "frequency": "monthly",
+      "category": "utilities",
+      "isRecurring": true,
+      "splitAmount": 14,
+      "notes": "Erin pays $261.54, Ben pays ~$14",
+      "createdAt": "2026-02-12T00:00:00Z",
+      "updatedAt": "2026-02-12T00:00:00Z"
+    },
+    {
+      "id": "ziply-fiber",
+      "name": "Ziply Fiber (internet)",
+      "amount": 102,
+      "dueDate": "17",
+      "frequency": "monthly",
+      "category": "utilities",
+      "isRecurring": true,
+      "notes": "",
+      "createdAt": "2026-02-12T00:00:00Z",
+      "updatedAt": "2026-02-12T00:00:00Z"
+    },
+    {
+      "id": "ahs",
+      "name": "AHS",
+      "amount": 34.99,
+      "dueDate": "17",
+      "frequency": "monthly",
+      "category": "other",
+      "isRecurring": true,
+      "notes": "",
+      "createdAt": "2026-02-12T00:00:00Z",
+      "updatedAt": "2026-02-12T00:00:00Z"
+    },
+    {
+      "id": "verizon-cell",
+      "name": "Verizon (cell)",
+      "amount": 267.02,
+      "dueDate": "5",
+      "frequency": "monthly",
+      "category": "utilities",
+      "isRecurring": true,
+      "notes": "",
+      "createdAt": "2026-02-12T00:00:00Z",
+      "updatedAt": "2026-02-12T00:00:00Z"
+    },
+    {
+      "id": "city-tigard",
+      "name": "City of Tigard",
+      "amount": 145,
+      "dueDate": "15",
+      "frequency": "monthly",
+      "category": "other",
+      "isRecurring": true,
+      "notes": "",
+      "createdAt": "2026-02-12T00:00:00Z",
+      "updatedAt": "2026-02-12T00:00:00Z"
+    },
+    {
+      "id": "pge",
+      "name": "PGE (electric)",
+      "amount": 169,
+      "dueDate": "15",
+      "frequency": "monthly",
+      "category": "utilities",
+      "isRecurring": true,
+      "notes": "",
+      "createdAt": "2026-02-12T00:00:00Z",
+      "updatedAt": "2026-02-12T00:00:00Z"
+    },
+    {
+      "id": "progressive",
+      "name": "Progressive (car/home)",
+      "amount": 425.32,
+      "dueDate": "22",
+      "frequency": "monthly",
+      "category": "insurance",
+      "isRecurring": true,
+      "notes": "",
+      "createdAt": "2026-02-12T00:00:00Z",
+      "updatedAt": "2026-02-12T00:00:00Z"
+    },
+    {
+      "id": "ecoguard",
+      "name": "EcoGuard (pest, split)",
+      "amount": 104,
+      "dueDate": "7",
+      "frequency": "monthly",
+      "category": "other",
+      "isRecurring": true,
+      "splitAmount": 52,
+      "notes": "",
+      "createdAt": "2026-02-12T00:00:00Z",
+      "updatedAt": "2026-02-12T00:00:00Z"
+    },
+    {
+      "id": "claude-ai",
+      "name": "Claude AI",
+      "amount": 100,
+      "dueDate": "5",
+      "frequency": "monthly",
+      "category": "subscription",
+      "isRecurring": true,
+      "notes": "Due 2/5",
+      "createdAt": "2026-02-12T00:00:00Z",
+      "updatedAt": "2026-02-12T00:00:00Z"
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "amount": 25,
+      "dueDate": "22",
+      "frequency": "monthly",
+      "category": "subscription",
+      "isRecurring": true,
+      "notes": "",
+      "createdAt": "2026-02-12T00:00:00Z",
+      "updatedAt": "2026-02-12T00:00:00Z"
+    },
+    {
+      "id": "openrouter",
+      "name": "OpenRouter",
+      "amount": 10.8,
+      "dueDate": "10",
+      "frequency": "monthly",
+      "category": "subscription",
+      "isRecurring": true,
+      "notes": "Due 2/10",
+      "createdAt": "2026-02-12T00:00:00Z",
+      "updatedAt": "2026-02-12T00:00:00Z"
+    },
+    {
+      "id": "replit",
+      "name": "Replit",
+      "amount": 25,
+      "dueDate": "28",
+      "frequency": "monthly",
+      "category": "subscription",
+      "isRecurring": true,
+      "notes": "",
+      "createdAt": "2026-02-12T00:00:00Z",
+      "updatedAt": "2026-02-12T00:00:00Z"
+    },
+    {
+      "id": "google-one",
+      "name": "Google One",
+      "amount": 2,
+      "dueDate": "28",
+      "frequency": "monthly",
+      "category": "subscription",
+      "isRecurring": true,
+      "notes": "",
+      "createdAt": "2026-02-12T00:00:00Z",
+      "updatedAt": "2026-02-12T00:00:00Z"
+    },
+    {
+      "id": "audible",
+      "name": "Audible",
+      "amount": 23,
+      "dueDate": "7",
+      "frequency": "monthly",
+      "category": "subscription",
+      "isRecurring": true,
+      "notes": "",
+      "createdAt": "2026-02-12T00:00:00Z",
+      "updatedAt": "2026-02-12T00:00:00Z"
+    },
+    {
+      "id": "apple",
+      "name": "Apple",
+      "amount": 10,
+      "dueDate": "24",
+      "frequency": "monthly",
+      "category": "subscription",
+      "isRecurring": true,
+      "notes": "",
+      "createdAt": "2026-02-12T00:00:00Z",
+      "updatedAt": "2026-02-12T00:00:00Z"
+    },
+    {
+      "id": "kindle",
+      "name": "Kindle",
+      "amount": 3,
+      "dueDate": "26",
+      "frequency": "monthly",
+      "category": "subscription",
+      "isRecurring": true,
+      "notes": "",
+      "createdAt": "2026-02-12T00:00:00Z",
+      "updatedAt": "2026-02-12T00:00:00Z"
+    },
+    {
+      "id": "24hr-fitness",
+      "name": "24hr Fitness",
+      "amount": 32,
+      "dueDate": "13",
+      "frequency": "monthly",
+      "category": "subscription",
+      "isRecurring": true,
+      "notes": "",
+      "createdAt": "2026-02-12T00:00:00Z",
+      "updatedAt": "2026-02-12T00:00:00Z"
+    },
+    {
+      "id": "gas",
+      "name": "Gas",
+      "amount": 50,
+      "dueDate": "1",
+      "frequency": "monthly",
+      "category": "transport",
+      "isRecurring": true,
+      "notes": "",
+      "createdAt": "2026-02-12T00:00:00Z",
+      "updatedAt": "2026-02-12T00:00:00Z"
+    },
+    {
+      "id": "food",
+      "name": "Food/Groceries",
+      "amount": 400,
+      "dueDate": "1",
+      "frequency": "monthly",
+      "category": "food",
+      "isRecurring": true,
+      "notes": "",
+      "createdAt": "2026-02-12T00:00:00Z",
+      "updatedAt": "2026-02-12T00:00:00Z"
+    },
+    {
+      "id": "wcs-dance",
+      "name": "WCS Wednesday (dance)",
+      "amount": 256,
+      "dueDate": "1",
+      "frequency": "monthly",
+      "category": "other",
+      "isRecurring": true,
+      "notes": "$64/week * 4",
+      "createdAt": "2026-02-12T00:00:00Z",
+      "updatedAt": "2026-02-12T00:00:00Z"
+    },
+    {
+      "id": "dog-food",
+      "name": "Dog Food (Farmer's Dog)",
+      "amount": 107.64,
+      "dueDate": "18",
+      "frequency": "monthly",
+      "category": "other",
+      "isRecurring": true,
+      "notes": "$215.28 every 2 months (last paid 12/18)",
+      "createdAt": "2026-02-12T00:00:00Z",
+      "updatedAt": "2026-02-12T00:00:00Z"
+    },
+    {
+      "id": "federal-tax",
+      "name": "Federal Taxes",
+      "amount": 216,
+      "dueDate": "1",
+      "frequency": "monthly",
+      "category": "other",
+      "isRecurring": true,
+      "notes": "Paid as needed",
+      "createdAt": "2026-02-12T00:00:00Z",
+      "updatedAt": "2026-02-12T00:00:00Z"
+    }
+  ],
+  "income": [
+    {
+      "id": "centene",
+      "source": "Centene",
+      "amount": 7137,
+      "frequency": "monthly",
+      "isPaused": false,
+      "lastUpdated": "2026-02-12T00:00:00Z"
+    },
+    {
+      "id": "uber-lyft",
+      "source": "Uber/Lyft",
+      "amount": 0,
+      "frequency": "irregular",
+      "isPaused": false,
+      "lastUpdated": "2026-02-12T00:00:00Z"
+    }
+  ],
+  "transactions": [],
+  "reminders": [
+    {
+      "title": "City of Tigard due - $145.00",
+      "dueDate": "2026-02-15T08:00:00.000Z",
+      "type": "bill",
+      "status": "pending",
+      "daysBefore": 2,
+      "relatedBillId": "city-tigard",
+      "customText": "City of Tigard payment of $145.00 is due on 15",
+      "id": "897ff24f-82e2-4a52-93e3-baad3bf97611",
+      "createdAt": "2026-02-13T01:36:14.348Z"
+    },
+    {
+      "title": "PGE (electric) due - $169.00",
+      "dueDate": "2026-02-15T08:00:00.000Z",
+      "type": "bill",
+      "status": "pending",
+      "daysBefore": 2,
+      "relatedBillId": "pge",
+      "customText": "PGE (electric) payment of $169.00 is due on 15",
+      "id": "24144ce6-7837-4070-b0e1-bc708a783da8",
+      "createdAt": "2026-02-13T01:36:14.352Z"
+    },
+    {
+      "title": "24hr Fitness due - $32.00",
+      "dueDate": "2026-02-13T08:00:00.000Z",
+      "type": "bill",
+      "status": "pending",
+      "daysBefore": 2,
+      "relatedBillId": "24hr-fitness",
+      "customText": "24hr Fitness payment of $32.00 is due on 13",
+      "id": "7a0a062c-485c-4bf4-a4ce-76c732870f6f",
+      "createdAt": "2026-02-13T01:36:14.356Z"
+    }
+  ],
+  "goals": [
+    {
+      "id": "netflix-sdet",
+      "name": "Netflix SDET 4 job application",
+      "currentAmount": 0,
+      "dueDate": "2026-06-30",
+      "progressPercent": 0,
+      "notes": "Status: pending",
+      "createdAt": "2026-02-12T00:00:00Z",
+      "updatedAt": "2026-02-12T00:00:00Z"
+    },
+    {
+      "id": "centene-fulltime",
+      "name": "Centene full-time",
+      "currentAmount": 0,
+      "dueDate": "2026-03-31",
+      "progressPercent": 50,
+      "notes": "Status: in progress, contract ends 3/31/26",
+      "createdAt": "2026-02-12T00:00:00Z",
+      "updatedAt": "2026-02-12T00:00:00Z"
+    },
+    {
+      "id": "hugback-launch",
+      "name": "HugBack app launch",
+      "currentAmount": 0,
+      "dueDate": "2026-12-31",
+      "progressPercent": 60,
+      "notes": "Status: in progress",
+      "createdAt": "2026-02-12T00:00:00Z",
+      "updatedAt": "2026-02-12T00:00:00Z"
+    },
+    {
+      "id": "debt-freedom",
+      "name": "Debt freedom",
+      "currentAmount": 0,
+      "dueDate": "2028-12-31",
+      "progressPercent": 5,
+      "notes": "Status: in progress - KILL CHASE FIRST",
+      "createdAt": "2026-02-12T00:00:00Z",
+      "updatedAt": "2026-02-12T00:00:00Z"
+    },
+    {
+      "id": "rebuild-child",
+      "name": "Rebuild relationship with child",
+      "currentAmount": 0,
+      "dueDate": "2026-12-31",
+      "progressPercent": 40,
+      "notes": "Status: in progress, therapy starting",
+      "createdAt": "2026-02-12T00:00:00Z",
+      "updatedAt": "2026-02-12T00:00:00Z"
+    }
+  ],
+  "gamification": {
+    "chaoPoints": 575,
+    "badges": [],
+    "streaks": {
+      "onTimePay": 7,
+      "bestOnTimeStreak": 7,
+      "lastPaymentDate": "2026-02-13"
+    },
+    "dailyChallenges": {
+      "completed": [
+        "2026-02-13"
+      ]
+    },
+    "milestonesAchieved": []
+  }
+}
