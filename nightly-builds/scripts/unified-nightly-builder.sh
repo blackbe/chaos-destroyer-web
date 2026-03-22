@@ -109,21 +109,41 @@ $TASK_DESC
 
 INSTRUCTIONS:
 1. Build a complete, testable implementation
-2. Save all new files in: $TASK_DIR/
-3. Include a README.md with:
+2. For EVERY code file, use this format:
+   [FILE: path/to/filename.js]
+   \`\`\`jsx
+   // code here
+   \`\`\`
+3. **CRITICAL: If you create a React component with imports like './ComponentName.css', you MUST also create the CSS file with [FILE: path/to/ComponentName.css] in the same output.**
+4. Include a README.md with:
    - What you built
    - How to test it
    - Integration steps (where to add it in App.js or relevant files)
    - Any Supabase schema changes needed
-4. Create a SCREENSHOTS.md with code examples or visual descriptions
-5. If it requires Supabase changes, include a SQL migration file
-6. Make it production-ready: error handling, loading states, accessibility
-7. Reference existing HugBack code style and patterns
-8. Include PropTypes or TypeScript types
-9. If it needs a new route, include the Router config
-10. Keep scope small — this should be completable in 2-3 hours
-11. Use existing HugBack color tokens and styling patterns
-12. Mobile-first responsive design
+5. Create a SCREENSHOTS.md with code examples or visual descriptions
+6. If it requires Supabase changes, include a SQL migration file with [FILE: migrations/YYYY-MM-DD-description.sql]
+7. Make it production-ready: error handling, loading states, accessibility
+8. Reference existing HugBack code style and patterns
+9. Include PropTypes or TypeScript types
+10. If it needs a new route, include the Router config
+11. Keep scope small — this should be completable in 2-3 hours
+12. Use existing HugBack color tokens and styling patterns
+13. Mobile-first responsive design
+14. CRITICAL: Every code file MUST start with [FILE: path/to/file] marker before the code block
+
+Example format:
+[FILE: src/components/MyComponent.js]
+\`\`\`jsx
+import React from 'react';
+const MyComponent = () => { ... };
+export default MyComponent;
+\`\`\`
+
+[FILE: backend/routes/api.js]
+\`\`\`javascript
+const express = require('express');
+...
+\`\`\`
 
 Start building now! Output complete, working code."
     ;;
@@ -153,6 +173,22 @@ INSTRUCTIONS:
 7. If it needs to integrate with other tools (calendar, email, Supabase), document that
 8. Keep it focused and lightweight
 9. If it's a script, include error handling and logging
+
+**IMPORTANT: When writing code blocks, use this format for EVERY file:**
+\`\`\`
+[FILE: path/to/filename.js]
+\`\`\`jsx
+(your code here)
+\`\`\`
+
+For example:
+\`\`\`
+[FILE: src/components/MyComponent.js]
+\`\`\`jsx
+import React from 'react';
+const MyComponent = () => { ... };
+export default MyComponent;
+\`\`\`
 
 Start building now! Output complete, practical code."
     ;;
@@ -211,41 +247,26 @@ if [ "$TAG" = "HUGBACK" ]; then
   if [ ! -f "package.json" ]; then
     echo "[$TIMESTAMP] ERROR: HugBack project not found at $PROJECT_DIR" >> "$LOG_DIR/unified-nightly.log"
   else
-    # Step 1: Copy generated files to HugBack repo
-    if [ -d "$TASK_DIR" ]; then
-      echo "[$TIMESTAMP] Copying generated files from $TASK_DIR to $PROJECT_DIR..." >> "$LOG_DIR/unified-nightly.log"
+    # Step 1: Extract code blocks from generated markdown
+    echo "[$TIMESTAMP] Extracting code blocks from generated-output.md..." >> "$LOG_DIR/unified-nightly.log"
+    
+    GENERATED_MD="$TASK_DIR/generated-output.md"
+    FILES_BEFORE=$(find "$PROJECT_DIR" -type f \( -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" \) 2>/dev/null | wc -l)
+    
+    if [ -f "$GENERATED_MD" ]; then
+      # Run Python extractor to parse [FILE: path] markers and extract code
+      python3 "$NIGHTLY_DIR/scripts/extract-code-blocks.py" "$GENERATED_MD" "$PROJECT_DIR" "$LOG_DIR/unified-nightly.log" 2>&1
       
-      # Copy all .js, .jsx, .ts, .tsx, .css, .sql files (skip markdown summaries)
-      find "$TASK_DIR" -type f \( -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" -o -name "*.css" -o -name "*.sql" \) 2>/dev/null | while read file; do
-        # Determine destination based on filename and context
-        FILENAME=$(basename "$file")
-        
-        # SQL files go to migrations/
-        if [[ "$FILENAME" == *.sql ]]; then
-          mkdir -p "$PROJECT_DIR/migrations"
-          cp "$file" "$PROJECT_DIR/migrations/" 2>/dev/null || true
-          echo "[$TIMESTAMP] Copied $FILENAME to migrations/" >> "$LOG_DIR/unified-nightly.log"
-        # Component files go to src/components/
-        elif [[ "$FILENAME" == *Component* || "$FILENAME" == *component* ]]; then
-          mkdir -p "$PROJECT_DIR/src/components"
-          cp "$file" "$PROJECT_DIR/src/components/" 2>/dev/null || true
-          echo "[$TIMESTAMP] Copied $FILENAME to src/components/" >> "$LOG_DIR/unified-nightly.log"
-        # Backend/routes go to backend/
-        elif [[ "$FILENAME" == *route* || "$FILENAME" == *routes* ]]; then
-          mkdir -p "$PROJECT_DIR/backend/routes"
-          cp "$file" "$PROJECT_DIR/backend/routes/" 2>/dev/null || true
-          echo "[$TIMESTAMP] Copied $FILENAME to backend/routes/" >> "$LOG_DIR/unified-nightly.log"
-        # Utils go to src/utils/
-        elif [[ "$FILENAME" == *util* || "$FILENAME" == *helper* ]]; then
-          mkdir -p "$PROJECT_DIR/src/utils"
-          cp "$file" "$PROJECT_DIR/src/utils/" 2>/dev/null || true
-          echo "[$TIMESTAMP] Copied $FILENAME to src/utils/" >> "$LOG_DIR/unified-nightly.log"
-        # Everything else goes to src/
-        else
-          cp "$file" "$PROJECT_DIR/src/" 2>/dev/null || true
-          echo "[$TIMESTAMP] Copied $FILENAME to src/" >> "$LOG_DIR/unified-nightly.log"
-        fi
-      done
+      FILES_AFTER=$(find "$PROJECT_DIR" -type f \( -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" \) 2>/dev/null | wc -l)
+      FILES_ADDED=$((FILES_AFTER - FILES_BEFORE))
+      
+      if [ "$FILES_ADDED" -gt 0 ]; then
+        echo "[$TIMESTAMP] ✅ Extracted $FILES_ADDED new files" >> "$LOG_DIR/unified-nightly.log"
+      else
+        echo "[$TIMESTAMP] ⚠️ No files extracted (may need manual integration)" >> "$LOG_DIR/unified-nightly.log"
+      fi
+    else
+      echo "[$TIMESTAMP] ⚠️ generated-output.md not found at $GENERATED_MD" >> "$LOG_DIR/unified-nightly.log"
     fi
     
     # Step 2: Run build to verify no errors (use full path to npm)
@@ -254,21 +275,29 @@ if [ "$TAG" = "HUGBACK" ]; then
       echo "[$TIMESTAMP] ✅ Build succeeded" >> "$LOG_DIR/unified-nightly.log"
       
       # Step 3: Git commit and push
-      echo "[$TIMESTAMP] Committing changes to git..." >> "$LOG_DIR/unified-nightly.log"
-      
+      echo "[$TIMESTAMP] Staging changes with git add -A..." >> "$LOG_DIR/unified-nightly.log"
       git add -A
-      COMMIT_MSG="feat: Integrate nightly build task #$TASK_NUM - $TASK_DESC"
-      git commit -m "$COMMIT_MSG" 2>/dev/null || echo "[$TIMESTAMP] No changes to commit or commit failed" >> "$LOG_DIR/unified-nightly.log"
       
-      # Push to main
-      echo "[$TIMESTAMP] Pushing to main branch..." >> "$LOG_DIR/unified-nightly.log"
-      if git push origin main >> "$LOG_DIR/unified-nightly.log" 2>&1; then
-        echo "[$TIMESTAMP] ✅ Pushed to main" >> "$LOG_DIR/unified-nightly.log"
-        
-        # Step 4: Trigger Vercel deployment
-        echo "[$TIMESTAMP] Vercel will auto-deploy from git push" >> "$LOG_DIR/unified-nightly.log"
+      # Check if there are changes to commit
+      if git diff --cached --quiet 2>/dev/null; then
+        echo "[$TIMESTAMP] ⚠️ No changes to commit (files may not have been extracted)" >> "$LOG_DIR/unified-nightly.log"
       else
-        echo "[$TIMESTAMP] ⚠️ Push failed (check git status)" >> "$LOG_DIR/unified-nightly.log"
+        echo "[$TIMESTAMP] Committing changes..." >> "$LOG_DIR/unified-nightly.log"
+        COMMIT_MSG="feat: Integrate nightly build task #$TASK_NUM - $TASK_DESC"
+        
+        if git commit -m "$COMMIT_MSG" >> "$LOG_DIR/unified-nightly.log" 2>&1; then
+          echo "[$TIMESTAMP] ✅ Committed: $COMMIT_MSG" >> "$LOG_DIR/unified-nightly.log"
+          
+          # Push to main
+          echo "[$TIMESTAMP] Pushing to main branch..." >> "$LOG_DIR/unified-nightly.log"
+          if git push origin main >> "$LOG_DIR/unified-nightly.log" 2>&1; then
+            echo "[$TIMESTAMP] ✅ Pushed to main — Vercel will auto-deploy" >> "$LOG_DIR/unified-nightly.log"
+          else
+            echo "[$TIMESTAMP] ❌ Push failed (check git status and network)" >> "$LOG_DIR/unified-nightly.log"
+          fi
+        else
+          echo "[$TIMESTAMP] ❌ Commit failed — check git status" >> "$LOG_DIR/unified-nightly.log"
+        fi
       fi
     else
       echo "[$TIMESTAMP] ❌ Build failed - review errors in log" >> "$LOG_DIR/unified-nightly.log"

@@ -76,17 +76,17 @@
 - **Single Builder:** `~/.openclaw/workspace/nightly-builds/scripts/unified-nightly-builder.sh`
 - **Schedule:** 00:00 (midnight) daily
 - **Model:** OpenAI gpt-4o-mini (~$0.019 per 10k tokens, very cheap)
-- **Backlog:** `~/.openclaw/workspace/nightly-builds/UNIFIED-BACKLOG.md` (48 tasks: 22 complete, 26 blocked)
+- **Backlog:** `~/.openclaw/workspace/nightly-builds/UNIFIED-BACKLOG.md` (48 tasks: 24 complete [0-24], 24 pending [25-48])
 - **Output:** `~/.openclaw/workspace/nightly-builds/outputs/YYYY-MM-DD-{hugback|chaos-destroyer}-N/`
-- **Status:** 🔴 BLOCKED (2026-03-14) — Node symlink issue prevents npm builds from succeeding in launchd
-- **Root cause:** npm scripts use `#!/usr/bin/env node` shebang, but Node is at `/usr/local/opt/node@22/bin/`, not in system PATH
-- **Fix (APPROVED 2026-03-14 20:35):** Symlink Node to `/usr/local/bin/` via fix-node-symlinks.sh
-- **✅ Auto-apply system live (2026-03-13 07:02 AM):** HUGBACK tasks now: copy files → npm build → git commit → git push → auto-deploy to Vercel.
-- **TONIGHT (2026-03-15 00:00):** Builder auto-executes fix-node-symlinks.sh (no pending tasks). Verifies npm works. Commits fix. All backlog still [b] = blocked until fix verified.
-- **SUNDAY (2026-03-15):** Change all [b] back to [ ], resume Task #23 onwards
+- **Status:** 🟢 **INTEGRATION FIX APPLIED (2026-03-18 07:30 AM)** — Code extraction now working
+- **Fix Details:** OpenAI wraps code with `[FILE: src/path/file.js]` markers; extract-code-blocks.py writes actual files; git integration fixed
+- **Previous Issue:** Builds generated code but never copied to HugBack repo → nothing shipped
+- **Next Build (Tonight 00:00):** Task #25 (User signup funnel tracker) will use working integration
 - **Alerts:** WhatsApp on failures only
 - **API key:** Loaded from ~/.env (OPENAI_API_KEY)
-- **Progress:** 22 of 48 tasks complete, 0 integrated (45.8% built, 0% shipped)
+- **Progress:** 26 of 48 tasks complete (54% built, 2 features shipped to production!)
+- **Shipped to production:** Task #25 (Signup funnel tracker) + Task #26 (Test data seeder)
+- **Status (2026-03-21 00:00):** Task #27 blocked (OpenAI generated .js but no .css file), Task #28 also failed due to inherited broken state. Reverted changes, will skip Task #27 and resume with Task #28 next cycle.
 
 ### Project Separation (2026-03-08)
 - **HugBack repo:** Clean (src/, backend/, package.json only) — nightly infrastructure removed

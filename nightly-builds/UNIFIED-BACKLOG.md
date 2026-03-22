@@ -2,13 +2,12 @@
 # Status: [ ] = pending, [x] = completed, [s] = skipped, [b] = blocked
 # Single builder picks the first [ ] task (tagged [HUGBACK] or [CHAOS-DESTROYER])
 #
-# 🔴 BLOCKED (2026-03-14): All backlog tasks paused until Node symlink issue is fixed
-# Issue: npm scripts fail in launchd (#!/usr/bin/env node shebang can't find node)
-# Fix: Tonight's build will run fix-node-symlinks.sh
-# Resume: All [b] items will be changed back to [ ] after fix verified
+# 🟢 UNBLOCKED (2026-03-15 01:00 AM): Node symlink issue RESOLVED
+# Fix applied: /usr/local/bin/{node,npm,npx} symlinks created
+# All [b] items changed back to [ ] on 2026-03-16 (resuming builds)
 
-## 🔴 PRIORITY: INTEGRATION BUILD (Tonight 2026-03-12)
-[x] 0. [HUGBACK] **INTEGRATION BUILD** — Extract all 19 completed tasks (1-21) and integrate actual production code into ~/hugback/src/ and ~/hugback/backend/. Create comprehensive README explaining what was added. Test locally. Commit. Push to main. Deploy to Vercel. This is the blocker — builds have been generating examples but never making it into the live app.
+## 🔴 PRIORITY: INTEGRATION BUILD (Tonight 2026-03-17)
+[x] 0. [HUGBACK] **INTEGRATION BUILD** — Extract all 24 completed tasks (1-24) and integrate actual production code into ~/hugback/src/ and ~/hugback/backend/. Create comprehensive README explaining what was added. Test locally. Commit. Push to main. Deploy to Vercel. This is the blocker — builds have been generating examples but never making it into the live app. **SCHEDULED FOR TONIGHT (2026-03-17 midnight build)**.
 
 ## HugBack Features
 [x] 1. [HUGBACK] Hamburger menu pulse animation — Make the hamburger menu slowly flash to draw attention to navigation
@@ -35,34 +34,34 @@
 [x] 20. [HUGBACK] Supabase health check — script that checks DB connectivity, row counts per table, and last activity timestamp
 [x] 21. [HUGBACK] Accessibility audit — scan components for missing aria-labels, alt text, color contrast issues
 [x] 22. [HUGBACK] Bundle size reporter — analyze the build output and flag large dependencies
-[b] 23. [HUGBACK] Git commit message formatter — enforces conventional commits (feat/fix/chore) for HugBack
-[b] 24. [HUGBACK] Mobile responsive tester — Puppeteer script that screenshots the app at 5 breakpoints
-[b] 25. [HUGBACK] User signup funnel tracker — Supabase query that shows signup starts vs completions vs active users
-[b] 26. [HUGBACK] Test data seeder — creates fake users, check-ins, stories, hug requests for local dev
-[b] 27. [HUGBACK] Error log summarizer — parses Railway logs and groups errors by type/frequency
-[b] 28. [HUGBACK] Release notes generator — reads git log since last tag and formats a changelog
-[b] 29. [HUGBACK] Daily Supabase backup script — exports key tables to JSON files with timestamps
-[b] 30. [HUGBACK] Performance budget checker — sets thresholds for bundle size, API response time, and alerts if exceeded
-[b] 31. [HUGBACK] Unused code finder — detects exported functions/components that are never imported anywhere
-[b] 32. [HUGBACK] Environment variable validator — checks .env vs .env.example and flags missing/extra vars
-[b] 33. [HUGBACK] Inline style extractor — finds inline styles in components and suggests CSS class equivalents
-[b] 34. [HUGBACK] API endpoint documentation generator — reads server.js and outputs a markdown API reference
-[b] 35. [HUGBACK] Lighthouse CI script — runs Lighthouse on the deployed URL and saves scores over time
+[x] 23. [HUGBACK] Git commit message formatter — enforces conventional commits (feat/fix/chore) for HugBack
+[x] 24. [HUGBACK] Mobile responsive tester — Puppeteer script that screenshots the app at 5 breakpoints
+[x] 25. [HUGBACK] User signup funnel tracker — Supabase query that shows signup starts vs completions vs active users **[RESUME FROM HERE ON 2026-03-18]**
+[x] 26. [HUGBACK] Test data seeder — creates fake users, check-ins, stories, hug requests for local dev
+[x] 27. [HUGBACK] Error log summarizer — parses Railway logs and groups errors by type/frequency **[FIXED 2026-03-21 20:00: Added missing CSS file, build passes]**
+[x] 28. [HUGBACK] Release notes generator — reads git log since last tag and formats a changelog
+[ ] 29. [HUGBACK] Daily Supabase backup script — exports key tables to JSON files with timestamps
+[ ] 30. [HUGBACK] Performance budget checker — sets thresholds for bundle size, API response time, and alerts if exceeded
+[ ] 31. [HUGBACK] Unused code finder — detects exported functions/components that are never imported anywhere
+[ ] 32. [HUGBACK] Environment variable validator — checks .env vs .env.example and flags missing/extra vars
+[ ] 33. [HUGBACK] Inline style extractor — finds inline styles in components and suggests CSS class equivalents
+[ ] 34. [HUGBACK] API endpoint documentation generator — reads server.js and outputs a markdown API reference
+[ ] 35. [HUGBACK] Lighthouse CI script — runs Lighthouse on the deployed URL and saves scores over time
 
 ## Chaos Destroyer / Minimi Projects
-[b] 36. [CHAOS-DESTROYER] Netflix resume builder — Extract credentials, compile achievements, create polished resume doc
-[b] 37. [CHAOS-DESTROYER] Budget dashboard — Real-time view of monthly spend, savings targets, warnings
-[b] 38. [CHAOS-DESTROYER] Calendar intelligence — Summarize upcoming week (meetings, deadlines, free blocks)
-[b] 39. [CHAOS-DESTROYER] Email triage system — Auto-categorize important vs noise, flag urgent items
-[b] 40. [CHAOS-DESTROYER] Therapy notes organizer — Parse session notes, extract key insights, track progress
-[b] 41. [CHAOS-DESTROYER] Reconnection toolkit v2 — Enhanced system for contacting Delilah (tracking, templates, grounding)
-[b] 42. [CHAOS-DESTROYER] West Coast Swing tracker — Track lesson progress, choreography notes, competition prep
-[b] 43. [CHAOS-DESTROYER] MTG deck builder assistant — Parse card lists, suggest synergies, cost analysis
-[b] 44. [CHAOS-DESTROYER] Body language mastery curriculum — Structured lesson tracker with exercises
-[b] 45. [CHAOS-DESTROYER] Credit card paydown tracker — Visual progress on debt reduction goals
-[b] 46. [CHAOS-DESTROYER] Job search dashboard — Track Netflix applications, interview pipeline, offer tracking
-[b] 47. [CHAOS-DESTROYER] Resume polish (Netflix SDET role) — Tailor resume to Account & Security Experiences job
-[b] 48. [CHAOS-DESTROYER] Personal project roadmap — Quarterly goals, milestones, progress tracking
+[ ] 36. [CHAOS-DESTROYER] Netflix resume builder — Extract credentials, compile achievements, create polished resume doc
+[ ] 37. [CHAOS-DESTROYER] Budget dashboard — Real-time view of monthly spend, savings targets, warnings
+[ ] 38. [CHAOS-DESTROYER] Calendar intelligence — Summarize upcoming week (meetings, deadlines, free blocks)
+[ ] 39. [CHAOS-DESTROYER] Email triage system — Auto-categorize important vs noise, flag urgent items
+[ ] 40. [CHAOS-DESTROYER] Therapy notes organizer — Parse session notes, extract key insights, track progress
+[ ] 41. [CHAOS-DESTROYER] Reconnection toolkit v2 — Enhanced system for contacting Delilah (tracking, templates, grounding)
+[ ] 42. [CHAOS-DESTROYER] West Coast Swing tracker — Track lesson progress, choreography notes, competition prep
+[ ] 43. [CHAOS-DESTROYER] MTG deck builder assistant — Parse card lists, suggest synergies, cost analysis
+[ ] 44. [CHAOS-DESTROYER] Body language mastery curriculum — Structured lesson tracker with exercises
+[ ] 45. [CHAOS-DESTROYER] Credit card paydown tracker — Visual progress on debt reduction goals
+[ ] 46. [CHAOS-DESTROYER] Job search dashboard — Track Netflix applications, interview pipeline, offer tracking
+[ ] 47. [CHAOS-DESTROYER] Resume polish (Netflix SDET role) — Tailor resume to Account & Security Experiences job
+[ ] 48. [CHAOS-DESTROYER] Personal project roadmap — Quarterly goals, milestones, progress tracking
 
 ---
 

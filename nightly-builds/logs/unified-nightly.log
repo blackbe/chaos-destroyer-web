@@ -78,3 +78,478 @@ sudosudo: a terminal is required to read the password; either use the -S option 
 : a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
 sudo: sudoa password is required: 
 a password is required
+[2026-03-16_16-30-57] Starting task #23 [HUGBACK]: Git commit message formatter — enforces conventional commits (feat/fix/chore) for HugBack
+[2026-03-16_16-30-57] Invoking OpenAI gpt-4o-mini...
+[2026-03-16_16-30-57] Tokens used: 1420
+[2026-03-16_16-30-57] Auto-applying HUGBACK changes...
+[2026-03-16_16-30-57] Copying generated files from /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-03-16-hugback-23 to /Users/benblack/hugback...
+[2026-03-16_16-30-57] Running npm run build to verify...
+
+> hugback@0.1.0 build
+> CI=false react-scripts build
+
+Creating an optimized production build...
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Compiled with warnings.
+
+[eslint] 
+src/AdminDashboard.js
+  Line 16:6:  React Hook useEffect has a missing dependency: 'fetchReports'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/Chat.js
+  Line 72:6:  React Hook useEffect has a missing dependency: 'fetchMessages'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/HugBoard.js
+  Line 57:6:    React Hook useEffect has missing dependencies: 'fetchHugRequests' and 'fetchMyRequests'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+  Line 165:43:  'matchCheckError' is assigned a value but never used                                                                                         no-unused-vars
+  Line 178:15:  'data' is assigned a value but never used                                                                                                    no-unused-vars
+
+src/HugCoach.js
+  Line 63:13:  'emailContent' is assigned a value but never used  no-unused-vars
+
+src/Matches.js
+  Line 33:6:  React Hook useEffect has a missing dependency: 'fetchMatches'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/Profile.js
+  Line 17:21:  'error' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+File sizes after gzip:
+
+  111.91 kB  build/static/js/main.dc03bfe0.js
+  1.73 kB    build/static/css/main.9a7bdb4e.css
+
+The project was built assuming it is hosted at /.
+You can control this with the homepage field in your package.json.
+
+The build folder is ready to be deployed.
+You may serve it with a static server:
+
+  npm install -g serve
+  serve -s build
+
+Find out more about deployment here:
+
+  https://cra.link/deployment
+
+npm notice
+npm notice New major version of npm available! 10.9.4 -> 11.11.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.11.1
+npm notice To update run: npm install -g npm@11.11.1
+npm notice
+[2026-03-16_16-30-57] ✅ Build succeeded
+[2026-03-16_16-30-57] Committing changes to git...
+[2026-03-16_16-30-57] Pushing to main branch...
+To https://github.com/blackbe/hugback.git
+   f7213bc7..b9a1a323  main -> main
+[2026-03-16_16-30-57] ✅ Pushed to main
+[2026-03-16_16-30-57] Vercel will auto-deploy from git push
+[2026-03-16_16-30-57] Completed task #23 [HUGBACK]. Output in /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-03-16-hugback-23/
+[2026-03-16_16-30-57] ──────────────────────────────
+[2026-03-17_00-00-00] Starting task #24 [HUGBACK]: Mobile responsive tester — Puppeteer script that screenshots the app at 5 breakpoints
+[2026-03-17_00-00-00] Invoking OpenAI gpt-4o-mini...
+[2026-03-17_00-00-00] Tokens used: 1463
+[2026-03-17_00-00-00] Auto-applying HUGBACK changes...
+[2026-03-17_00-00-00] Copying generated files from /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-03-17-hugback-24 to /Users/benblack/hugback...
+[2026-03-17_00-00-00] Running npm run build to verify...
+
+> hugback@0.1.0 build
+> CI=false react-scripts build
+
+Creating an optimized production build...
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Compiled with warnings.
+
+[eslint] 
+src/AdminDashboard.js
+  Line 16:6:  React Hook useEffect has a missing dependency: 'fetchReports'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/Chat.js
+  Line 72:6:  React Hook useEffect has a missing dependency: 'fetchMessages'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/HugBoard.js
+  Line 57:6:    React Hook useEffect has missing dependencies: 'fetchHugRequests' and 'fetchMyRequests'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+  Line 165:43:  'matchCheckError' is assigned a value but never used                                                                                         no-unused-vars
+  Line 178:15:  'data' is assigned a value but never used                                                                                                    no-unused-vars
+
+src/HugCoach.js
+  Line 63:13:  'emailContent' is assigned a value but never used  no-unused-vars
+
+src/Matches.js
+  Line 33:6:  React Hook useEffect has a missing dependency: 'fetchMatches'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/Profile.js
+  Line 17:21:  'error' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+File sizes after gzip:
+
+  111.91 kB  build/static/js/main.dc03bfe0.js
+  1.73 kB    build/static/css/main.9a7bdb4e.css
+
+The project was built assuming it is hosted at /.
+You can control this with the homepage field in your package.json.
+
+The build folder is ready to be deployed.
+You may serve it with a static server:
+
+  npm install -g serve
+  serve -s build
+
+Find out more about deployment here:
+
+  https://cra.link/deployment
+
+[2026-03-17_00-00-00] ✅ Build succeeded
+[2026-03-17_00-00-00] Committing changes to git...
+[2026-03-17_00-00-00] No changes to commit or commit failed
+[2026-03-17_00-00-00] Pushing to main branch...
+Everything up-to-date
+[2026-03-17_00-00-00] ✅ Pushed to main
+[2026-03-17_00-00-00] Vercel will auto-deploy from git push
+[2026-03-17_00-00-00] Completed task #24 [HUGBACK]. Output in /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-03-17-hugback-24/
+[2026-03-17_00-00-00] ──────────────────────────────
+[2026-03-18_00-00-00] Starting task #0 [HUGBACK]: **INTEGRATION BUILD** — Extract all 24 completed tasks (1-24) and integrate actual production code into ~/hugback/src/ and ~/hugback/backend/. Create comprehensive README explaining what was added. Test locally. Commit. Push to main. Deploy to Vercel. This is the blocker — builds have been generating examples but never making it into the live app. **SCHEDULED FOR TONIGHT (2026-03-17 midnight build)**.
+[2026-03-18_00-00-00] Invoking OpenAI gpt-4o-mini...
+[2026-03-18_00-00-00] Tokens used: 1789
+[2026-03-18_00-00-00] Auto-applying HUGBACK changes...
+[2026-03-18_00-00-00] Copying generated files from /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-03-18-hugback-0 to /Users/benblack/hugback...
+[2026-03-18_00-00-00] Running npm run build to verify...
+
+> hugback@0.1.0 build
+> CI=false react-scripts build
+
+Creating an optimized production build...
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Compiled with warnings.
+
+[eslint] 
+src/AdminDashboard.js
+  Line 16:6:  React Hook useEffect has a missing dependency: 'fetchReports'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/Chat.js
+  Line 72:6:  React Hook useEffect has a missing dependency: 'fetchMessages'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/HugBoard.js
+  Line 57:6:    React Hook useEffect has missing dependencies: 'fetchHugRequests' and 'fetchMyRequests'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+  Line 165:43:  'matchCheckError' is assigned a value but never used                                                                                         no-unused-vars
+  Line 178:15:  'data' is assigned a value but never used                                                                                                    no-unused-vars
+
+src/HugCoach.js
+  Line 63:13:  'emailContent' is assigned a value but never used  no-unused-vars
+
+src/Matches.js
+  Line 33:6:  React Hook useEffect has a missing dependency: 'fetchMatches'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/Profile.js
+  Line 17:21:  'error' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+File sizes after gzip:
+
+  111.91 kB  build/static/js/main.dc03bfe0.js
+  1.73 kB    build/static/css/main.9a7bdb4e.css
+
+The project was built assuming it is hosted at /.
+You can control this with the homepage field in your package.json.
+
+The build folder is ready to be deployed.
+You may serve it with a static server:
+
+  npm install -g serve
+  serve -s build
+
+Find out more about deployment here:
+
+  https://cra.link/deployment
+
+[2026-03-18_00-00-00] ✅ Build succeeded
+[2026-03-18_00-00-00] Committing changes to git...
+[2026-03-18_00-00-00] No changes to commit or commit failed
+[2026-03-18_00-00-00] Pushing to main branch...
+Everything up-to-date
+[2026-03-18_00-00-00] ✅ Pushed to main
+[2026-03-18_00-00-00] Vercel will auto-deploy from git push
+[2026-03-18_00-00-00] Completed task #0 [HUGBACK]. Output in /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-03-18-hugback-0/
+[2026-03-18_00-00-00] ──────────────────────────────
+[2026-03-18_20-31-41] Starting task #25 [HUGBACK]: User signup funnel tracker — Supabase query that shows signup starts vs completions vs active users **[RESUME FROM HERE ON 2026-03-18]**
+[2026-03-18_20-31-41] Invoking OpenAI gpt-4o-mini...
+[2026-03-18_20-31-41] Tokens used: 1483
+[2026-03-18_20-31-41] Auto-applying HUGBACK changes...
+[2026-03-18_20-31-41] Extracting code blocks from generated-output.md...
+[extract-code-blocks.py] Found 4 [FILE:] markers
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/migrations/2026-03-18-create_signup_events_table.sql
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/backend/routes/signup.js
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/utils/signupTracker.js
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/components/Login.js
+[extract-code-blocks.py] Extraction complete. 4 files written
+
+[2026-03-18_20-31-41] ✅ Extracted 3 new files
+[2026-03-18_20-31-41] Running npm run build to verify...
+
+> hugback@0.1.0 build
+> CI=false react-scripts build
+
+Creating an optimized production build...
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Compiled with warnings.
+
+[eslint] 
+src/AdminDashboard.js
+  Line 16:6:  React Hook useEffect has a missing dependency: 'fetchReports'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/Chat.js
+  Line 72:6:  React Hook useEffect has a missing dependency: 'fetchMessages'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/HugBoard.js
+  Line 57:6:    React Hook useEffect has missing dependencies: 'fetchHugRequests' and 'fetchMyRequests'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+  Line 165:43:  'matchCheckError' is assigned a value but never used                                                                                         no-unused-vars
+  Line 178:15:  'data' is assigned a value but never used                                                                                                    no-unused-vars
+
+src/HugCoach.js
+  Line 63:13:  'emailContent' is assigned a value but never used  no-unused-vars
+
+src/Matches.js
+  Line 33:6:  React Hook useEffect has a missing dependency: 'fetchMatches'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/Profile.js
+  Line 17:21:  'error' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+File sizes after gzip:
+
+  111.91 kB  build/static/js/main.dc03bfe0.js
+  1.73 kB    build/static/css/main.9a7bdb4e.css
+
+The project was built assuming it is hosted at /.
+You can control this with the homepage field in your package.json.
+
+The build folder is ready to be deployed.
+You may serve it with a static server:
+
+  npm install -g serve
+  serve -s build
+
+Find out more about deployment here:
+
+  https://cra.link/deployment
+
+[2026-03-18_20-31-41] ✅ Build succeeded
+[2026-03-18_20-31-41] Staging changes with git add -A...
+[2026-03-18_20-31-41] Committing changes...
+[main c716be2a] feat: Integrate nightly build task #25 - User signup funnel tracker — Supabase query that shows signup starts vs completions vs active users **[RESUME FROM HERE ON 2026-03-18]**
+ 4 files changed, 75 insertions(+)
+ create mode 100644 backend/routes/signup.js
+ create mode 100644 migrations/2026-03-18-create_signup_events_table.sql
+ create mode 100644 src/components/Login.js
+ create mode 100644 src/utils/signupTracker.js
+[2026-03-18_20-31-41] ✅ Committed: feat: Integrate nightly build task #25 - User signup funnel tracker — Supabase query that shows signup starts vs completions vs active users **[RESUME FROM HERE ON 2026-03-18]**
+[2026-03-18_20-31-41] Pushing to main branch...
+To https://github.com/blackbe/hugback.git
+   b9a1a323..c716be2a  main -> main
+[2026-03-18_20-31-41] ✅ Pushed to main — Vercel will auto-deploy
+[2026-03-18_20-31-41] Completed task #25 [HUGBACK]. Output in /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-03-18-hugback-25/
+[2026-03-18_20-31-41] ──────────────────────────────
+[2026-03-19_00-00-00] Starting task #26 [HUGBACK]: Test data seeder — creates fake users, check-ins, stories, hug requests for local dev
+[2026-03-19_00-00-00] Invoking OpenAI gpt-4o-mini...
+[2026-03-19_00-00-00] Tokens used: 2022
+[2026-03-19_00-00-00] Auto-applying HUGBACK changes...
+[2026-03-19_00-00-00] Extracting code blocks from generated-output.md...
+[extract-code-blocks.py] Found 4 [FILE:] markers
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/backend/seeder/index.js
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/backend/routes/seeder.js
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/backend/app.js
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/migrations/2023-10-04-add-seeder.sql
+[extract-code-blocks.py] Extraction complete. 4 files written
+
+[2026-03-19_00-00-00] ✅ Extracted 3 new files
+[2026-03-19_00-00-00] Running npm run build to verify...
+
+> hugback@0.1.0 build
+> CI=false react-scripts build
+
+Creating an optimized production build...
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Compiled with warnings.
+
+[eslint] 
+src/AdminDashboard.js
+  Line 16:6:  React Hook useEffect has a missing dependency: 'fetchReports'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/Chat.js
+  Line 72:6:  React Hook useEffect has a missing dependency: 'fetchMessages'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/HugBoard.js
+  Line 57:6:    React Hook useEffect has missing dependencies: 'fetchHugRequests' and 'fetchMyRequests'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+  Line 165:43:  'matchCheckError' is assigned a value but never used                                                                                         no-unused-vars
+  Line 178:15:  'data' is assigned a value but never used                                                                                                    no-unused-vars
+
+src/HugCoach.js
+  Line 63:13:  'emailContent' is assigned a value but never used  no-unused-vars
+
+src/Matches.js
+  Line 33:6:  React Hook useEffect has a missing dependency: 'fetchMatches'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/Profile.js
+  Line 17:21:  'error' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+File sizes after gzip:
+
+  111.91 kB  build/static/js/main.dc03bfe0.js
+  1.73 kB    build/static/css/main.9a7bdb4e.css
+
+The project was built assuming it is hosted at /.
+You can control this with the homepage field in your package.json.
+
+The build folder is ready to be deployed.
+You may serve it with a static server:
+
+  npm install -g serve
+  serve -s build
+
+Find out more about deployment here:
+
+  https://cra.link/deployment
+
+[2026-03-19_00-00-00] ✅ Build succeeded
+[2026-03-19_00-00-00] Staging changes with git add -A...
+[2026-03-19_00-00-00] Committing changes...
+[main 40c90996] feat: Integrate nightly build task #26 - Test data seeder — creates fake users, check-ins, stories, hug requests for local dev
+ 4 files changed, 138 insertions(+)
+ create mode 100644 backend/app.js
+ create mode 100644 backend/routes/seeder.js
+ create mode 100644 backend/seeder/index.js
+ create mode 100644 migrations/2023-10-04-add-seeder.sql
+[2026-03-19_00-00-00] ✅ Committed: feat: Integrate nightly build task #26 - Test data seeder — creates fake users, check-ins, stories, hug requests for local dev
+[2026-03-19_00-00-00] Pushing to main branch...
+To https://github.com/blackbe/hugback.git
+   c716be2a..40c90996  main -> main
+[2026-03-19_00-00-00] ✅ Pushed to main — Vercel will auto-deploy
+[2026-03-19_00-00-00] Completed task #26 [HUGBACK]. Output in /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-03-19-hugback-26/
+[2026-03-19_00-00-00] ──────────────────────────────
+[2026-03-20_00-00-00] Starting task #27 [HUGBACK]: Error log summarizer — parses Railway logs and groups errors by type/frequency
+[2026-03-20_00-00-00] Invoking OpenAI gpt-4o-mini...
+[2026-03-20_00-00-00] Tokens used: 1649
+[2026-03-20_00-00-00] Auto-applying HUGBACK changes...
+[2026-03-20_00-00-00] Extracting code blocks from generated-output.md...
+[extract-code-blocks.py] Found 5 [FILE:] markers
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/components/ErrorLogSummarizer.js
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/api/errorLogs.js
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/backend/routes/errorLogs.js
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/backend/app.js
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/App.js
+[extract-code-blocks.py] Extraction complete. 5 files written
+
+[2026-03-20_00-00-00] ✅ Extracted 3 new files
+[2026-03-20_00-00-00] Running npm run build to verify...
+
+> hugback@0.1.0 build
+> CI=false react-scripts build
+
+Creating an optimized production build...
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Failed to compile.
+
+Module not found: Error: Can't resolve './ErrorLogSummarizer.css' in '/Users/benblack/hugback/src/components'
+
+
+[2026-03-20_00-00-00] ❌ Build failed - review errors in log
+[2026-03-20_00-00-00] Completed task #27 [HUGBACK]. Output in /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-03-20-hugback-27/
+[2026-03-20_00-00-00] ──────────────────────────────
+[2026-03-21_00-00-00] Starting task #28 [HUGBACK]: Release notes generator — reads git log since last tag and formats a changelog
+[2026-03-21_00-00-00] Invoking OpenAI gpt-4o-mini...
+[2026-03-21_00-00-00] Tokens used: 1614
+[2026-03-21_00-00-00] Auto-applying HUGBACK changes...
+[2026-03-21_00-00-00] Extracting code blocks from generated-output.md...
+[extract-code-blocks.py] Found 3 [FILE:] markers
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/components/ReleaseNotes.js
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/routes.js
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/backend/routes/api.js
+[extract-code-blocks.py] Extraction complete. 3 files written
+
+[2026-03-21_00-00-00] ✅ Extracted 3 new files
+[2026-03-21_00-00-00] Running npm run build to verify...
+
+> hugback@0.1.0 build
+> CI=false react-scripts build
+
+Creating an optimized production build...
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Failed to compile.
+
+Module not found: Error: Can't resolve './ErrorLogSummarizer.css' in '/Users/benblack/hugback/src/components'
+
+
+[2026-03-21_00-00-00] ❌ Build failed - review errors in log
+[2026-03-21_00-00-00] Completed task #28 [HUGBACK]. Output in /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-03-21-hugback-28/
+[2026-03-21_00-00-00] ──────────────────────────────
+[2026-03-22_00-00-00] Starting task #28 [HUGBACK]: Release notes generator — reads git log since last tag and formats a changelog
+[2026-03-22_00-00-00] Invoking OpenAI gpt-4o-mini...
+[2026-03-22_00-00-00] Tokens used: 1431
+[2026-03-22_00-00-00] Auto-applying HUGBACK changes...
+[2026-03-22_00-00-00] Extracting code blocks from generated-output.md...
+[extract-code-blocks.py] Found 4 [FILE:] markers
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/components/ReleaseNotes.js
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/backend/routes/api/releaseNotes.js
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/backend/server.js
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/App.js
+[extract-code-blocks.py] Extraction complete. 4 files written
+
+[2026-03-22_00-00-00] ✅ Extracted 2 new files
+[2026-03-22_00-00-00] Running npm run build to verify...
+
+> hugback@0.1.0 build
+> CI=false react-scripts build
+
+Creating an optimized production build...
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Failed to compile.
+
+Module not found: Error: Can't resolve './ReleaseNotes.css' in '/Users/benblack/hugback/src/components'
+
+
+[2026-03-22_00-00-00] ❌ Build failed - review errors in log
+[2026-03-22_00-00-00] Completed task #28 [HUGBACK]. Output in /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-03-22-hugback-28/
+[2026-03-22_00-00-00] ──────────────────────────────

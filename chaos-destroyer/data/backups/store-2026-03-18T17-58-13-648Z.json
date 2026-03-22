@@ -451,17 +451,6 @@
       "customText": "Make a payment of at least $256.00 to Car Loan (APR: 5.9%)",
       "id": "48b09321-cf39-4234-a42d-7318f07b71a8",
       "createdAt": "2026-03-18T17:58:13.644Z"
-    },
-    {
-      "title": "Dog Food (Farmer's Dog) due - $107.64",
-      "dueDate": "2026-04-18T07:00:00.000Z",
-      "type": "bill",
-      "status": "pending",
-      "daysBefore": 2,
-      "relatedBillId": "dog-food",
-      "customText": "Dog Food (Farmer's Dog) payment of $107.64 is due on 18",
-      "id": "746a3e08-82b4-4314-870c-b2ef8d9272e1",
-      "createdAt": "2026-03-18T17:58:13.648Z"
     }
   ],
   "goals": [
