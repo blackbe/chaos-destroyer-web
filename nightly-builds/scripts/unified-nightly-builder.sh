@@ -194,45 +194,31 @@ Start building now! Output complete, practical code."
     ;;
 esac
 
-# ── Run OpenAI API (gpt-4o-mini) ──────────
+# ── Run Ollama (llama3.2:3b) ────────────
 cd "$WORKSPACE_DIR"
 
-# Load OpenAI API key from ~/.env
-OPENAI_API_KEY=$(grep "^OPENAI_API_KEY=" ~/.env | cut -d= -f2-)
+echo "[$TIMESTAMP] Invoking Ollama llama3.2:3b..." >> "$LOG_DIR/unified-nightly.log"
 
-if [ -z "$OPENAI_API_KEY" ]; then
-  echo "[$TIMESTAMP] ERROR: OPENAI_API_KEY not found in ~/.env" >> "$LOG_DIR/unified-nightly.log"
-  exit 1
-fi
-
-echo "[$TIMESTAMP] Invoking OpenAI gpt-4o-mini..." >> "$LOG_DIR/unified-nightly.log"
-
-# Call OpenAI API directly
-RESPONSE=$(curl -s https://api.openai.com/v1/chat/completions \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $OPENAI_API_KEY" \
+# Call Ollama API directly (local, free)
+RESPONSE=$(curl -s http://localhost:11434/api/generate \
   -d "{
-    \"model\": \"gpt-4o-mini\",
-    \"messages\": [{
-      \"role\": \"user\",
-      \"content\": $(echo "$PROMPT" | jq -Rs '.')
-    }],
-    \"temperature\": 0.7,
-    \"max_tokens\": 4000
+    \"model\": \"llama3.2:3b\",
+    \"prompt\": $(echo "$PROMPT" | jq -Rs '.'),
+    \"stream\": false,
+    \"temperature\": 0.7
   }")
 
 # Extract the response text
-RESPONSE_TEXT=$(echo "$RESPONSE" | jq -r '.choices[0].message.content // .error.message' 2>/dev/null)
+RESPONSE_TEXT=$(echo "$RESPONSE" | jq -r '.response // .error' 2>/dev/null)
 
 # Save the full response for debugging
-echo "$RESPONSE" > "$TASK_DIR/openai-response.json"
+echo "$RESPONSE" > "$TASK_DIR/ollama-response.json"
 
 # Save the generated content
 echo "$RESPONSE_TEXT" > "$TASK_DIR/generated-output.md"
 
-# Log the usage
-TOKENS_USED=$(echo "$RESPONSE" | jq -r '.usage.total_tokens // "unknown"' 2>/dev/null)
-echo "[$TIMESTAMP] Tokens used: $TOKENS_USED" >> "$LOG_DIR/unified-nightly.log"
+# Log the usage (Ollama doesn't track tokens the same way, just note it ran)
+echo "[$TIMESTAMP] Ollama generation completed (free, local)" >> "$LOG_DIR/unified-nightly.log"
 
 # ── Mark task as completed ──────────────────
 sed -i '' "${LINE_NUM}s/\[ \]/[x]/" "$BACKLOG"

@@ -550,17 +550,6 @@
       "customText": "WCS Wednesday (dance) payment of $256.00 is due on 1",
       "id": "53a30b5a-b4be-47fc-b5c4-ac35f11e2b7d",
       "createdAt": "2026-03-29T15:12:57.783Z"
-    },
-    {
-      "title": "Federal Taxes due - $216.00",
-      "dueDate": "2026-04-01T07:00:00.000Z",
-      "type": "bill",
-      "status": "pending",
-      "daysBefore": 2,
-      "relatedBillId": "federal-tax",
-      "customText": "Federal Taxes payment of $216.00 is due on 1",
-      "id": "668eacbb-9bed-45c2-9e7d-7e3eca6c8a03",
-      "createdAt": "2026-03-29T15:12:57.784Z"
     }
   ],
   "goals": [

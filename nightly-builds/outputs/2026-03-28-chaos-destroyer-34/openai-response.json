@@ -1,0 +1,36 @@
+{
+  "id": "chatcmpl-DOHwHamBRUQYxDg0OZ9dwa6xncNgq",
+  "object": "chat.completion",
+  "created": 1774681201,
+  "model": "gpt-4o-mini-2024-07-18",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Here’s a complete implementation of an email triage system for Ben called \"Chaos Destroyer.\" This system is designed to auto-categorize emails into important versus noise and flag urgent items. The implementation includes a Python script, a README file, and necessary error handling and logging.\n\n### Implementation Files\n\n#### 1. Email Triage Script\n\n```\n[FILE: /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-03-28-chaos-destroyer-34/email_triage.py]\n```python\nimport imaplib\nimport email\nfrom email.header import decode_header\nimport logging\nimport os\n\n# Configure logging\nlogging.basicConfig(level=logging.INFO, filename='email_triage.log', filemode='a',\n                    format='%(asctime)s - %(levelname)s - %(message)s')\n\n# Email configuration\nEMAIL = 'your_email@example.com'\nPASSWORD = 'your_password'\nIMAP_SERVER = 'imap.example.com'\n\n# Define categories\nIMPORTANT_KEYWORDS = ['urgent', 'important', 'asap', 'action required']\nNOISE_KEYWORDS = ['newsletter', 'promo', 'spam', 'offers']\n\ndef clean_subject(subject):\n    # Decode email subject\n    decoded = decode_header(subject)\n    subject = ''.join([str(t[0], t[1] if t[1] else 'utf-8') if isinstance(t[0], bytes) else t[0] for t in decoded])\n    return subject\n\ndef is_urgent(subject):\n    return any(keyword in subject.lower() for keyword in IMPORTANT_KEYWORDS)\n\ndef is_noise(subject):\n    return any(keyword in subject.lower() for keyword in NOISE_KEYWORDS)\n\ndef categorize_email(subject):\n    if is_urgent(subject):\n        return 'Urgent'\n    elif is_noise(subject):\n        return 'Noise'\n    else:\n        return 'Important'\n\ndef main():\n    try:\n        # Connect to the email server\n        mail = imaplib.IMAP4_SSL(IMAP_SERVER)\n        mail.login(EMAIL, PASSWORD)\n        mail.select('inbox')\n\n        # Search for all emails\n        status, messages = mail.search(None, 'ALL')\n\n        # Get email IDs\n        email_ids = messages[0].split()\n\n        categorized_emails = {'Urgent': [], 'Noise': [], 'Important': []}\n\n        for email_id in email_ids:\n            res, msg = mail.fetch(email_id, '(RFC822)')\n            msg = email.message_from_bytes(msg[0][1])\n            subject = clean_subject(msg['subject'])\n            category = categorize_email(subject)\n\n            categorized_emails[category].append(subject)\n            logging.info(f'Categorized email: {subject} -> {category}')\n\n        mail.logout()\n\n        # Output categorized emails\n        with open('categorized_emails.txt', 'w') as f:\n            for category, subjects in categorized_emails.items():\n                f.write(f'{category}:\\n')\n                for subject in subjects:\n                    f.write(f'  - {subject}\\n')\n\n        logging.info('Email triage completed successfully.')\n\n    except Exception as e:\n        logging.error(f'Error during email triage: {str(e)}')\n\nif __name__ == '__main__':\n    main()\n```\n\n#### 2. README File\n\n```\n[FILE: /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-03-28-chaos-destroyer-34/README.md]\n```\n# Chaos Destroyer - Email Triage System\n\n## What I Built\nThis is an email triage system that connects to your email account, fetches emails, and categorizes them into three groups: Urgent, Important, and Noise. It flags emails based on predefined keywords.\n\n## How to Use It\n1. Set your email credentials and IMAP server in the `email_triage.py` script.\n2. Run the script to categorize your inbox emails.\n3. Check the `categorized_emails.txt` file for the output of categorized emails.\n\n## Integration Steps\n1. **Email Configuration**: Update the `EMAIL`, `PASSWORD`, and `IMAP_SERVER` variables in the script with your credentials.\n2. **Run the Script**: Execute the script using Python 3:\n   ```bash\n   python3 email_triage.py\n   ```\n3. **Check Output**: The categorized emails will be saved in `categorized_emails.txt`.\n\n## Required Setup\n- Python 3\n- `imaplib` and `email` modules (included with Python standard library)\n\n## Example of Categorization\n- **Urgent**: \"Action Required: Please Review\"\n- **Noise**: \"Weekly Newsletter - Special Offers\"\n- **Important**: \"Team Meeting Agenda\"\n\n## Logging\nAll actions are logged in `email_triage.log`.\n\n## Error Handling\nThe script includes error handling for connection issues and logs errors to `email_triage.log`.\n\n## Sample Data\nThe output file `categorized_emails.txt` will contain categorized emails after running the script.\n\n---\n\nThis setup provides Ben with a practical tool to manage his email efficiently, reducing noise and highlighting urgent communications effectively.",
+        "refusal": null,
+        "annotations": []
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 410,
+    "completion_tokens": 1060,
+    "total_tokens": 1470,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "service_tier": "default",
+  "system_fingerprint": "fp_e738e3044b"
+}

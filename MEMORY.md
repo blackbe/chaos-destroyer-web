@@ -11,7 +11,7 @@
 - **Timezone:** America/Los_Angeles
 
 ## Work History
-- **Centene** (Dec 2024–present): QA Automation Engineer via Randstad. Built Playwright/TS/AWS framework from scratch. Reduced 5-day test suite to <4 hours. Selected for AI Pilot Program (Windsurf). Contract ends 3/31/2026.
+- **Centene** (Dec 2024–Dec 2026): QA Automation Engineer via Randstad. Built Playwright/TS/AWS framework from scratch. Reduced 5-day test suite to <4 hours. Selected for AI Pilot Program (Windsurf). **Contract extended to 12/31/2026** (was 3/31/2026). Full-time negotiation decision point: October 2026.
 - **Knipe Realty** (Oct 2019–Dec 2024): 5 years QA on CRM software
 - **U.S. Bank** (Oct 2018–Oct 2019): Senior Automation Tester, Java/Selenium, 200+ test cases automated
 - **AWS Elemental** (Jan 2014–Oct 2018): 4yr 10mo. Video streaming QA, iOS/Android/web, CI/CD. Patent holder.
@@ -33,8 +33,8 @@
 - IAM / network security expertise
 
 ## Goals
-- Netflix SDET 4 (Account & Security Experiences, $200k-$300k) — dream job
-- Full-time at Centene (benefits)
+- Full-time at Centene or Netflix SDET 4 (Account & Security Experiences, $200k-$300k) — dream job
+- Full-time employment by Oct 2026 (negotiation decision point)
 - HugBack app (React + Supabase, mental health)
 - Financial recovery ($26k lawyer, $36k to mom, credit cards)
 - Reconnect with estranged child (they/them)
@@ -84,9 +84,10 @@
 - **Next Build (Tonight 00:00):** Task #25 (User signup funnel tracker) will use working integration
 - **Alerts:** WhatsApp on failures only
 - **API key:** Loaded from ~/.env (OPENAI_API_KEY)
-- **Progress:** 26 of 48 tasks complete (54% built, 2 features shipped to production!)
-- **Shipped to production:** Task #25 (Signup funnel tracker) + Task #26 (Test data seeder)
-- **Status (2026-03-21 00:00):** Task #27 blocked (OpenAI generated .js but no .css file), Task #28 also failed due to inherited broken state. Reverted changes, will skip Task #27 and resume with Task #28 next cycle.
+- **Progress:** 28 of 83 tasks complete (34% built, multiple features shipped!)
+- **Shipped to production:** Tasks #23, #25, #26, #27, #28 all deployed to HugBack via Vercel
+- **Status (2026-03-22 10:18 AM):** Task #28 (Release notes generator) built & deployed successfully. Ready for Task #29 (Daily Supabase backup script) tonight at midnight. 9 days left to launch (March 31).
+- **Backlog restructure (2026-03-22):** Integrated all Trello items into backlog. Now alternating HugBack + Chaos Destroyer items (29-83). 57 HugBack items total, 12 Chaos Destroyer, 14 shared. Removed Netflix resume builder per request.
 
 ### Project Separation (2026-03-08)
 - **HugBack repo:** Clean (src/, backend/, package.json only) — nightly infrastructure removed
