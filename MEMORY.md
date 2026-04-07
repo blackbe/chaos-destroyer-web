@@ -72,22 +72,24 @@
 - Dancing
 (All other times OK)
 
-## Unified Nightly Build System (Active - OpenAI gpt-4o-mini)
+## Unified Nightly Build System (Active - Ollama llama3.2:3b)
 - **Single Builder:** `~/.openclaw/workspace/nightly-builds/scripts/unified-nightly-builder.sh`
 - **Schedule:** 00:00 (midnight) daily
-- **Model:** OpenAI gpt-4o-mini (~$0.019 per 10k tokens, very cheap)
-- **Backlog:** `~/.openclaw/workspace/nightly-builds/UNIFIED-BACKLOG.md` (48 tasks: 24 complete [0-24], 24 pending [25-48])
+- **Model:** Ollama llama3.2:3b (FREE, local)
+- **Backlog:** `~/.openclaw/workspace/nightly-builds/UNIFIED-BACKLOG.md` 
 - **Output:** `~/.openclaw/workspace/nightly-builds/outputs/YYYY-MM-DD-{hugback|chaos-destroyer}-N/`
-- **Status:** 🟢 **INTEGRATION FIX APPLIED (2026-03-18 07:30 AM)** — Code extraction now working
-- **Fix Details:** OpenAI wraps code with `[FILE: src/path/file.js]` markers; extract-code-blocks.py writes actual files; git integration fixed
-- **Previous Issue:** Builds generated code but never copied to HugBack repo → nothing shipped
-- **Next Build (Tonight 00:00):** Task #25 (User signup funnel tracker) will use working integration
-- **Alerts:** WhatsApp on failures only
-- **API key:** Loaded from ~/.env (OPENAI_API_KEY)
-- **Progress:** 28 of 83 tasks complete (34% built, multiple features shipped!)
-- **Shipped to production:** Tasks #23, #25, #26, #27, #28 all deployed to HugBack via Vercel
-- **Status (2026-03-22 10:18 AM):** Task #28 (Release notes generator) built & deployed successfully. Ready for Task #29 (Daily Supabase backup script) tonight at midnight. 9 days left to launch (March 31).
-- **Backlog restructure (2026-03-22):** Integrated all Trello items into backlog. Now alternating HugBack + Chaos Destroyer items (29-83). 57 HugBack items total, 12 Chaos Destroyer, 14 shared. Removed Netflix resume builder per request.
+- **Status:** 🟢 **ONLINE & SHIPPING (2026-04-07 12:05 PM)**
+- **Today's Wins (2026-04-07):**
+  - ✅ Fixed & shipped Task #46 (Support board) — manually fixed App.js/index.js, committed & pushed
+  - ✅ Fixed & shipped Task #48 (Real-time chat) — same fix, now in production
+  - ✅ Built & shipped Task #50 (Meetup coordination) — created MeetupCoordination component, API routes, integrated to Navbar, deployed to Vercel
+  - ✅ Generated Task #51 (MTG deck builder) — Chaos Destroyer project, code generated & documented
+- **Script Improvements (2026-04-07):**
+  - Completion gating: tasks only mark `[x]` if build AND push both succeed (prevents shipping broken code)
+  - Morning summaries now show ✅ SHIPPED or ⚠️ BUILD FAILED status
+- **Progress:** 31/83 tasks complete (37% shipped!). Task #50 brings HugBack to 22 deployed features.
+- **Budget Status:** $0.027/$1.00 spent (plenty of room)
+- **Next:** Task #52 (HugBack - AI moderation system) or Task #53 (Body language mastery curriculum)
 
 ### Project Separation (2026-03-08)
 - **HugBack repo:** Clean (src/, backend/, package.json only) — nightly infrastructure removed

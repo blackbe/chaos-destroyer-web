@@ -68,6 +68,10 @@ TAG=$(echo "$FULL_LINE" | sed -E 's/.*\[([A-Z-]+)\].*/\1/')
 TASK_NUM=$(echo "$FULL_LINE" | sed -E 's/^.*\] ([0-9]+)\..*/\1/')
 TASK_DESC=$(echo "$FULL_LINE" | sed -E 's/^.*\] [0-9]+\. \[.*\] //')
 
+# Track completion status (only set to true if build AND push succeed)
+BUILD_SUCCEEDED=false
+PUSH_SUCCEEDED=false
+
 echo "[$TIMESTAMP] Starting task #$TASK_NUM [$TAG]: $TASK_DESC" >> "$LOG_DIR/unified-nightly.log"
 
 # ── Determine output location based on tag ──
@@ -220,8 +224,7 @@ echo "$RESPONSE_TEXT" > "$TASK_DIR/generated-output.md"
 # Log the usage (Ollama doesn't track tokens the same way, just note it ran)
 echo "[$TIMESTAMP] Ollama generation completed (free, local)" >> "$LOG_DIR/unified-nightly.log"
 
-# ── Mark task as completed ──────────────────
-sed -i '' "${LINE_NUM}s/\[ \]/[x]/" "$BACKLOG"
+# NOTE: Task is NOT marked complete yet — only mark [x] after build + push succeeds
 
 # ── Auto-apply for HUGBACK tasks ────────────
 if [ "$TAG" = "HUGBACK" ]; then
@@ -259,6 +262,7 @@ if [ "$TAG" = "HUGBACK" ]; then
     echo "[$TIMESTAMP] Running npm run build to verify..." >> "$LOG_DIR/unified-nightly.log"
     if /usr/local/opt/node@22/bin/npm run build >> "$LOG_DIR/unified-nightly.log" 2>&1; then
       echo "[$TIMESTAMP] ✅ Build succeeded" >> "$LOG_DIR/unified-nightly.log"
+      BUILD_SUCCEEDED=true
       
       # Step 3: Git commit and push
       echo "[$TIMESTAMP] Staging changes with git add -A..." >> "$LOG_DIR/unified-nightly.log"
@@ -278,28 +282,49 @@ if [ "$TAG" = "HUGBACK" ]; then
           echo "[$TIMESTAMP] Pushing to main branch..." >> "$LOG_DIR/unified-nightly.log"
           if git push origin main >> "$LOG_DIR/unified-nightly.log" 2>&1; then
             echo "[$TIMESTAMP] ✅ Pushed to main — Vercel will auto-deploy" >> "$LOG_DIR/unified-nightly.log"
+            PUSH_SUCCEEDED=true
+            
+            # ✅ ONLY mark task complete if both build AND push succeeded
+            echo "[$TIMESTAMP] 🎉 Task #$TASK_NUM complete and shipped!" >> "$LOG_DIR/unified-nightly.log"
+            sed -i '' "${LINE_NUM}s/\[ \]/[x]/" "$BACKLOG"
           else
-            echo "[$TIMESTAMP] ❌ Push failed (check git status and network)" >> "$LOG_DIR/unified-nightly.log"
+            echo "[$TIMESTAMP] ❌ Push failed (check git status and network) — Task NOT marked complete" >> "$LOG_DIR/unified-nightly.log"
           fi
         else
-          echo "[$TIMESTAMP] ❌ Commit failed — check git status" >> "$LOG_DIR/unified-nightly.log"
+          echo "[$TIMESTAMP] ❌ Commit failed — check git status — Task NOT marked complete" >> "$LOG_DIR/unified-nightly.log"
         fi
       fi
     else
-      echo "[$TIMESTAMP] ❌ Build failed - review errors in log" >> "$LOG_DIR/unified-nightly.log"
+      echo "[$TIMESTAMP] ❌ Build failed - review errors in log — Task NOT marked complete" >> "$LOG_DIR/unified-nightly.log"
     fi
   fi
   
   cd "$WORKSPACE_DIR"
 fi
 
-# ── Log completion ──────────────────────────
-echo "[$TIMESTAMP] Completed task #$TASK_NUM [$TAG]. Output in $TASK_DIR/" >> "$LOG_DIR/unified-nightly.log"
+# ── Log completion status ──────────────────────────
+if [ "$PUSH_SUCCEEDED" = true ]; then
+  echo "[$TIMESTAMP] ✅ Task #$TASK_NUM [$TAG] complete and shipped to production" >> "$LOG_DIR/unified-nightly.log"
+else
+  echo "[$TIMESTAMP] ⚠️ Task #$TASK_NUM [$TAG] generated but not shipped (build or push failed)" >> "$LOG_DIR/unified-nightly.log"
+  echo "[$TIMESTAMP] 📋 Fix the errors and re-run to complete this task" >> "$LOG_DIR/unified-nightly.log"
+  echo "[$TIMESTAMP] Output files saved in: $TASK_DIR/" >> "$LOG_DIR/unified-nightly.log"
+fi
 echo "[$TIMESTAMP] ──────────────────────────────" >> "$LOG_DIR/unified-nightly.log"
 
 # ── Summary file for morning review ─────────
+if [ "$PUSH_SUCCEEDED" = true ]; then
+  STATUS="✅ SHIPPED TO PRODUCTION"
+  REVIEW_NOTES="Changes are live on Vercel. Check the deployed version and git log to verify."
+else
+  STATUS="⚠️ BUILD FAILED — NOT SHIPPED"
+  REVIEW_NOTES="The build generated code but had compilation errors. Review the errors below and fix them to complete this task."
+fi
+
 cat > "$TASK_DIR/MORNING-SUMMARY.md" << EOF
 # 🌅 Good Morning, Ben!
+
+## Status: $STATUS
 
 ## Tonight I built: $PROJECT_TYPE #$TASK_NUM
 **$TASK_DESC**
@@ -307,16 +332,25 @@ cat > "$TASK_DIR/MORNING-SUMMARY.md" << EOF
 **Date:** $DATE  
 **Output location:** \`$TASK_DIR/\`
 
+### What happened:
+$REVIEW_NOTES
+
 ### What to review:
 1. **README.md** — What was built and how to use/integrate it
 2. **generated-output.md** — The full build output
 3. **Integration steps** — Follow README.md for next steps
+4. **Build log** — Check \`unified-nightly.log\` for any errors
 
-### How to test:
-1. For HUGBACK tasks: Files auto-copied to ~/hugback/, build verified, committed to git, pushed to main
-2. Check HugBack deploy status: https://vercel.com/dashboard (auto-deploys on git push)
-3. Review files in \`$TASK_DIR/\` for the original output
-4. Check git log for commit: \`cd ~/hugback && git log --oneline -1\`
+### If the build failed:
+1. Check the build errors in \`$TASK_DIR/\` or the log file
+2. Identify the issue (missing dependencies, syntax errors, import issues)
+3. The task will retry automatically on the next nightly build
+4. Or, manually fix the code in ~/hugback/ and commit
+
+### If the build succeeded:
+1. Check HugBack deploy status: https://vercel.com/dashboard
+2. Verify the new feature works
+3. Check git log for commit: \`cd ~/hugback && git log --oneline -1\`
 
 ### Next task on the backlog:
 \`\`\`
@@ -326,6 +360,7 @@ $(grep '^\[ \]' "$BACKLOG" | head -3 | sed 's/^\[ \] //')
 ---
 *Built automatically by Minimi's Unified Nightly Builder* ⚡  
 *Output for: [$TAG]*
+*Status: $STATUS*
 EOF
 
 echo "✅ Done! Check $TASK_DIR/ for results."

@@ -58,13 +58,13 @@
 [x] 42. [HUGBACK] Lighthouse CI script — runs Lighthouse on the deployed URL and saves scores over time
 [x] 43. [CHAOS-DESTROYER] Add missing features to the debt tracker
 [x] 44. [HUGBACK] Matching algorithm (AI-based compatibility) — From Trello Phase 2 #53
-[ ] 45. [CHAOS-DESTROYER] Fix bugs or performance issues in Chaos Destroyer web UI
-[ ] 46. [HUGBACK] Support board (like Reddit) — From Trello Phase 2 #54
-[ ] 47. [CHAOS-DESTROYER] Polish the UI/UX of Chaos Destroyer web UI
-[ ] 48. [HUGBACK] Real-time chat system (like WhatsApp) — From Trello Phase 2 #55
-[ ] 49. [CHAOS-DESTROYER] Deploy Chaos Destroyer web UI somewhere (Vercel)
-[ ] 50. [HUGBACK] Meetup coordination (like Meetup.com) — From Trello Phase 2 #56
-[ ] 51. [CHAOS-DESTROYER] MTG deck builder assistant — Parse card lists, suggest synergies, cost analysis
+[x] 45. [CHAOS-DESTROYER] Fix bugs or performance issues in Chaos Destroyer web UI
+[x] 46. [HUGBACK] Support board (like Reddit) — From Trello Phase 2 #54
+[x] 47. [CHAOS-DESTROYER] Polish the UI/UX of Chaos Destroyer web UI
+[x] 48. [HUGBACK] Real-time chat system (like WhatsApp) — From Trello Phase 2 #55
+[x] 49. [CHAOS-DESTROYER] Deploy Chaos Destroyer web UI somewhere (Vercel)
+[x] 50. [HUGBACK] Meetup coordination (like Meetup.com) — From Trello Phase 2 #56
+[x] 51. [CHAOS-DESTROYER] MTG deck builder assistant — Parse card lists, suggest synergies, cost analysis
 [ ] 52. [HUGBACK] AI moderation system (expensive, complex) — From Trello Phase 2 #57
 [ ] 53. [CHAOS-DESTROYER] Body language mastery curriculum — Structured lesson tracker with exercises
 [ ] 54. [HUGBACK] (Next HugBack item)
