@@ -65,7 +65,7 @@
 [x] 49. [CHAOS-DESTROYER] Deploy Chaos Destroyer web UI somewhere (Vercel)
 [x] 50. [HUGBACK] Meetup coordination (like Meetup.com) — From Trello Phase 2 #56
 [x] 51. [CHAOS-DESTROYER] MTG deck builder assistant — Parse card lists, suggest synergies, cost analysis
-[ ] 52. [HUGBACK] AI moderation system (expensive, complex) — From Trello Phase 2 #57
+[b] 52. [HUGBACK] AI moderation system (expensive, complex) — From Trello Phase 2 #57 — BLOCKED: Ollama hangs on complex generation (2026-04-08). Will revisit with better model setup.
 [ ] 53. [CHAOS-DESTROYER] Body language mastery curriculum — Structured lesson tracker with exercises
 [ ] 54. [HUGBACK] (Next HugBack item)
 [ ] 55. [CHAOS-DESTROYER] Credit card paydown tracker — Visual progress on debt reduction goals
