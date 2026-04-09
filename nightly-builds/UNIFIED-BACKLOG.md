@@ -66,55 +66,52 @@
 [x] 50. [HUGBACK] Meetup coordination (like Meetup.com) — From Trello Phase 2 #56
 [x] 51. [CHAOS-DESTROYER] MTG deck builder assistant — Parse card lists, suggest synergies, cost analysis
 [b] 52. [HUGBACK] AI moderation system (expensive, complex) — From Trello Phase 2 #57 — BLOCKED: Ollama hangs on complex generation (2026-04-08). Will revisit with better model setup.
-[ ] 53. [CHAOS-DESTROYER] Body language mastery curriculum — Structured lesson tracker with exercises
-[ ] 54. [HUGBACK] (Next HugBack item)
+[x] 53. [CHAOS-DESTROYER] Body language mastery curriculum — Structured lesson tracker with exercises
+[b] 54. [HUGBACK] Multi-language support (translation API) — From Trello Phase 2 #58 — BLOCKED: Ollama hangs (same as #52, 2026-04-09 12:03 UTC)
 [ ] 55. [CHAOS-DESTROYER] Credit card paydown tracker — Visual progress on debt reduction goals
-[ ] 56. [HUGBACK] (Next HugBack item)
+[ ] 56. [HUGBACK] Age verification (third-party service) - 18+ only — From Trello Phase 2 #59
 [ ] 57. [CHAOS-DESTROYER] Dominion card game tracker — Track wins/losses, deck ideas, strategic notes from Monday games
-[ ] 58. [HUGBACK] (Next HugBack item)
+[ ] 58. [HUGBACK] Safety check-ins (custom system) — From Trello Phase 2 #60
 [ ] 59. [CHAOS-DESTROYER] ADHD & confidence journal — Daily check-in with mood, energy, wins, blockers, therapy insights
-[ ] 60. [HUGBACK] (Next HugBack item)
+[ ] 60. [HUGBACK] Location-based search (geolocation) — From Trello Phase 2 #61
 [ ] 61. [CHAOS-DESTROYER] Personal project roadmap — Quarterly goals, milestones, progress tracking
-[ ] 53. [HUGBACK] Multi-language support (translation API) — From Trello Phase 2 #58
-[ ] 54. [HUGBACK] Age verification (third-party service) - 18+ only — From Trello Phase 2 #59
-[ ] 55. [HUGBACK] Safety check-ins (custom system) — From Trello Phase 2 #60
-[ ] 56. [HUGBACK] Location-based search (geolocation) — From Trello Phase 2 #61
-[ ] 57. [HUGBACK] Interest and personality questionnaire — From Trello Phase 2 #69
-[ ] 58. [HUGBACK] Basic compatibility matching (rule-based, not AI) — From Trello Phase 2 #70
-[ ] 59. [HUGBACK] Filter by mood and reason for needing support — From Trello Phase 2 #71
-[ ] 60. [HUGBACK] User profiles (no photos, just bio and interests) — From Trello Phase 2 #72
-[ ] 61. [HUGBACK] Multiple language support via Google Translate API — From Trello Phase 2 #73
-[ ] 62. [HUGBACK] ID verification via Stripe Identity ($1.50 per verification) — From Trello Phase 3 #74
-[ ] 63. [HUGBACK] Lawyer-written Terms of Service and Privacy Policy — From Trello Phase 3 #75
-[ ] 64. [HUGBACK] Background check integration via Checkr API ($25-50 per check) — From Trello Phase 3 #76
-[ ] 65. [HUGBACK] Liability insurance policy secured — From Trello Phase 3 #77
-[ ] 66. [HUGBACK] Comprehensive safety resources page — From Trello Phase 3 #78
-[ ] 67. [HUGBACK] Emergency contact feature for users — From Trello Phase 3 #79
-[ ] 68. [HUGBACK] Curated list of public meetup locations — From Trello Phase 3 #80
-[ ] 69. [HUGBACK] Safety quiz that users must pass before first meetup — From Trello Phase 3 #81
-[ ] 70. [HUGBACK] Opt-in toggle for physical meetups (default: off) — From Trello Phase 4 #82
-[ ] 71. [HUGBACK] Public location coordination system — From Trello Phase 4 #83
-[ ] 72. [HUGBACK] Safety check-in: 'Did you meet safely?' post-meetup — From Trello Phase 4 #84
-[ ] 73. [HUGBACK] Share location with trusted friend feature — From Trello Phase 4 #85
-[ ] 74. [HUGBACK] Mandatory safety quiz before first physical meetup — From Trello Phase 4 #86
-[ ] 75. [HUGBACK] 24-hour cooling-off period before first meetup — From Trello Phase 4 #87
-[ ] 76. [HUGBACK] Verified badge for ID-checked and background-checked users — From Trello Phase 4 #88
-[ ] 77. [HUGBACK] In-app emergency contact button (calls 911) — From Trello Phase 4 #89
-[ ] 78. [HUGBACK] AI-powered compatibility matching algorithm — From Trello Phase 5 #90
-[ ] 79. [HUGBACK] AI content moderation (Azure Content Moderator) — From Trello Phase 5 #91
-[ ] 80. [HUGBACK] Video chat capability — From Trello Phase 5 #92
-[ ] 81. [HUGBACK] Advanced analytics and user insights — From Trello Phase 5 #93
-[ ] 82. [HUGBACK] Community features (interest groups, local events) — From Trello Phase 5 #94
-[ ] 83. [HUGBACK] Premium features (optional) — From Trello Phase 5 #95
+[ ] 62. [HUGBACK] Interest and personality questionnaire — From Trello Phase 2 #69
+[ ] 63. [HUGBACK] Basic compatibility matching (rule-based, not AI) — From Trello Phase 2 #70
+[ ] 64. [HUGBACK] Filter by mood and reason for needing support — From Trello Phase 2 #71
+[ ] 65. [HUGBACK] User profiles (no photos, just bio and interests) — From Trello Phase 2 #72
+[ ] 66. [HUGBACK] Multiple language support via Google Translate API — From Trello Phase 2 #73
+[ ] 67. [HUGBACK] ID verification via Stripe Identity ($1.50 per verification) — From Trello Phase 3 #74
+[ ] 68. [HUGBACK] Lawyer-written Terms of Service and Privacy Policy — From Trello Phase 3 #75
+[ ] 69. [HUGBACK] Background check integration via Checkr API ($25-50 per check) — From Trello Phase 3 #76
+[ ] 70. [HUGBACK] Liability insurance policy secured — From Trello Phase 3 #77
+[ ] 71. [HUGBACK] Comprehensive safety resources page — From Trello Phase 3 #78
+[ ] 72. [HUGBACK] Emergency contact feature for users — From Trello Phase 3 #79
+[ ] 73. [HUGBACK] Curated list of public meetup locations — From Trello Phase 3 #80
+[ ] 74. [HUGBACK] Safety quiz that users must pass before first meetup — From Trello Phase 3 #81
+[ ] 75. [HUGBACK] Opt-in toggle for physical meetups (default: off) — From Trello Phase 4 #82
+[ ] 76. [HUGBACK] Public location coordination system — From Trello Phase 4 #83
+[ ] 77. [HUGBACK] Safety check-in: 'Did you meet safely?' post-meetup — From Trello Phase 4 #84
+[ ] 78. [HUGBACK] Share location with trusted friend feature — From Trello Phase 4 #85
+[ ] 79. [HUGBACK] Mandatory safety quiz before first physical meetup — From Trello Phase 4 #86
+[ ] 80. [HUGBACK] 24-hour cooling-off period before first meetup — From Trello Phase 4 #87
+[ ] 81. [HUGBACK] Verified badge for ID-checked and background-checked users — From Trello Phase 4 #88
+[ ] 82. [HUGBACK] In-app emergency contact button (calls 911) — From Trello Phase 4 #89
+[ ] 83. [HUGBACK] AI-powered compatibility matching algorithm — From Trello Phase 5 #90
+[ ] 84. [HUGBACK] AI content moderation (Azure Content Moderator) — From Trello Phase 5 #91
+[ ] 85. [HUGBACK] Video chat capability — From Trello Phase 5 #92
+[ ] 86. [HUGBACK] Advanced analytics and user insights — From Trello Phase 5 #93
+[ ] 87. [HUGBACK] Community features (interest groups, local events) — From Trello Phase 5 #94
+[ ] 88. [HUGBACK] Premium features (optional) — From Trello Phase 5 #95
 
 ---
 
 ## Notes
 - HugBack features (1-15) are complete, waiting for integration into app
 - HugBack infrastructure (16-28) completed
-- **New integrated backlog (29-83):** HugBack + Chaos Destroyer alternating
-  - HugBack items: Infrastructure/tooling (29-42), Phase 2-5 features from Trello (43-83)
+- **Integrated backlog (29-88):** HugBack + Chaos Destroyer alternating
+  - HugBack items: Infrastructure/tooling (29-42), Phase 2-5 features from Trello (43-88)
   - Chaos Destroyer: Personal projects interspersed throughout
 - Builder routes outputs to appropriate directory based on tag
 - Netflix resume builder (was old #36) removed per request
-- **Backlog now 83 total items:** 57 HugBack + 12 Chaos Destroyer + 14 shared
+- **Fixed 2026-04-09:** Removed placeholder entries, renumbered to 88 items
+- **Blocked:** Task #52 (AI moderation) — Ollama hangs on complex generation. Needs better model or OpenAI.
