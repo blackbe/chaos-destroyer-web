@@ -7,6 +7,9 @@
 
 set -e
 
+# ── Load environment variables ──────────────
+source "$HOME/.env" 2>/dev/null || true
+
 # ── Config ──────────────────────────────────
 WORKSPACE_DIR="$HOME/.openclaw/workspace"
 NIGHTLY_DIR="$WORKSPACE_DIR/nightly-builds"
@@ -209,7 +212,7 @@ RESPONSE=$(curl -s https://api.anthropic.com/v1/messages \
   -H "x-api-key: $ANTHROPIC_API_KEY" \
   -H "anthropic-version: 2023-06-01" \
   -d "{
-    \"model\": \"claude-3-5-sonnet-20241022\",
+    \"model\": \"claude-haiku-4-5\",
     \"max_tokens\": 4000,
     \"messages\": [
       {
