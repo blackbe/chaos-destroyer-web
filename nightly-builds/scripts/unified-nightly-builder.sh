@@ -198,31 +198,39 @@ Start building now! Output complete, practical code."
     ;;
 esac
 
-# ── Run Ollama (llama3.2:3b) ────────────
+# ── Run Claude (Anthropic Sonnet) ────────────
 cd "$WORKSPACE_DIR"
 
-echo "[$TIMESTAMP] Invoking Ollama llama3.2:3b..." >> "$LOG_DIR/unified-nightly.log"
+echo "[$TIMESTAMP] Invoking Claude (Sonnet)..." >> "$LOG_DIR/unified-nightly.log"
 
-# Call Ollama API directly (local, free)
-RESPONSE=$(curl -s http://localhost:11434/api/generate \
+# Call Anthropic API
+RESPONSE=$(curl -s https://api.anthropic.com/v1/messages \
+  -H "Content-Type: application/json" \
+  -H "x-api-key: $ANTHROPIC_API_KEY" \
+  -H "anthropic-version: 2023-06-01" \
   -d "{
-    \"model\": \"llama3.2:3b\",
-    \"prompt\": $(echo "$PROMPT" | jq -Rs '.'),
-    \"stream\": false,
-    \"temperature\": 0.7
+    \"model\": \"claude-3-5-sonnet-20241022\",
+    \"max_tokens\": 4000,
+    \"messages\": [
+      {
+        \"role\": \"user\",
+        \"content\": $(echo "$PROMPT" | jq -Rs '.')
+      }
+    ]
   }")
 
 # Extract the response text
-RESPONSE_TEXT=$(echo "$RESPONSE" | jq -r '.response // .error' 2>/dev/null)
+RESPONSE_TEXT=$(echo "$RESPONSE" | jq -r '.content[0].text // .error.message // "Error: Empty response"' 2>/dev/null)
 
 # Save the full response for debugging
-echo "$RESPONSE" > "$TASK_DIR/ollama-response.json"
+echo "$RESPONSE" > "$TASK_DIR/claude-response.json"
 
 # Save the generated content
 echo "$RESPONSE_TEXT" > "$TASK_DIR/generated-output.md"
 
-# Log the usage (Ollama doesn't track tokens the same way, just note it ran)
-echo "[$TIMESTAMP] Ollama generation completed (free, local)" >> "$LOG_DIR/unified-nightly.log"
+# Log the usage
+TOKENS_USED=$(echo "$RESPONSE" | jq -r '.usage.output_tokens // "unknown"' 2>/dev/null)
+echo "[$TIMESTAMP] Claude generation completed (Sonnet, tokens: $TOKENS_USED)" >> "$LOG_DIR/unified-nightly.log"
 
 # NOTE: Task is NOT marked complete yet — only mark [x] after build + push succeeds
 
