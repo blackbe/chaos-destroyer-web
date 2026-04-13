@@ -1,0 +1,290 @@
+{
+  "billsData": [
+    {
+      "id": "mortgage",
+      "name": "Mortgage (split 50%)",
+      "amount": 2042.09,
+      "dueDate": "15",
+      "frequency": "monthly",
+      "category": "housing",
+      "notes": "Full: $4,084.19 split with Erin. Ben pays: $2,042.09",
+      "lastPaid": "1/15/26"
+    },
+    {
+      "id": "garbage",
+      "name": "Garbage",
+      "amount": 81.20,
+      "dueDate": "15",
+      "frequency": "bi-monthly",
+      "category": "utilities",
+      "notes": "Next payment due by 3/15",
+      "lastPaid": "1/17/26"
+    },
+    {
+      "id": "nw-gas",
+      "name": "NW Natural Gas",
+      "amount": 258.34,
+      "dueDate": "17",
+      "frequency": "monthly",
+      "category": "utilities",
+      "notes": "Amount varies. Current charges: $258.34. Erin pays $261.54, Ben pays ~$258.34. AUTO-PULL ENABLED: https://www.nwnatural.com/account/account-overview",
+      "lastPaid": "1/17/26",
+      "autoFetch": true,
+      "autoFetchUrl": "https://www.nwnatural.com/account/account-overview"
+    },
+    {
+      "id": "ziply-fiber",
+      "name": "Ziply Fiber (internet)",
+      "amount": 102.00,
+      "dueDate": "14",
+      "frequency": "monthly",
+      "category": "utilities",
+      "lastPaid": "1/17/26"
+    },
+    {
+      "id": "ahs",
+      "name": "AHS",
+      "amount": 34.99,
+      "dueDate": "12",
+      "frequency": "monthly",
+      "category": "other",
+      "lastPaid": "1/17/26"
+    },
+    {
+      "id": "verizon-cell",
+      "name": "Verizon (cell phones)",
+      "amount": 267.02,
+      "dueDate": "5",
+      "frequency": "monthly",
+      "category": "utilities",
+      "notes": "Erin pays automatically, but Ben needs to put money into joint checking account",
+      "lastPaid": "1/5/26"
+    },
+    {
+      "id": "city-tigard",
+      "name": "City of Tigard (water/sewer)",
+      "amount": 144.60,
+      "dueDate": "25",
+      "frequency": "monthly",
+      "category": "utilities",
+      "notes": "Amount varies. Next due: 2/25. AUTO-PULL ENABLED: https://cityoftigardor.municipalonlinepayments.com/cityoftigardor/utilities",
+      "lastPaid": "12/3/25",
+      "autoFetch": true,
+      "autoFetchUrl": "https://cityoftigardor.municipalonlinepayments.com/cityoftigardor/utilities"
+    },
+    {
+      "id": "pge-electric",
+      "name": "PGE (electric)",
+      "amount": 185.61,
+      "dueDate": "20",
+      "frequency": "monthly",
+      "category": "utilities",
+      "notes": "Current charges: $185.61",
+      "lastPaid": "12/3/25"
+    },
+    {
+      "id": "progressive",
+      "name": "Progressive (car & home insurance)",
+      "amount": 359.08,
+      "dueDate": "20",
+      "frequency": "monthly",
+      "category": "insurance",
+      "lastPaid": "1/22/26"
+    },
+    {
+      "id": "ecoguard",
+      "name": "EcoGuard (pest control)",
+      "amount": 104.00,
+      "dueDate": "7",
+      "frequency": "bi-monthly",
+      "category": "other",
+      "notes": "Past due 2/7, not paid yet",
+      "lastPaid": null
+    },
+    {
+      "id": "24hr-fitness",
+      "name": "24hr Fitness",
+      "amount": 31.99,
+      "dueDate": "13",
+      "frequency": "monthly",
+      "category": "subscription"
+    },
+    {
+      "id": "gas-car",
+      "name": "Gas (car expense)",
+      "amount": 60.00,
+      "dueDate": "18",
+      "frequency": "bi-weekly",
+      "category": "transport",
+      "notes": "Bi-weekly spend. Due on 18th and two weeks later. Typical bi-weekly spend: $30 fill-up",
+      "lastPaid": null
+    },
+    {
+      "id": "food",
+      "name": "Food/Groceries (expense)",
+      "amount": 400.00,
+      "dueDate": "18",
+      "frequency": "bi-weekly",
+      "category": "food",
+      "notes": "Bi-weekly spend. Due on 18th and two weeks later. Typical bi-weekly spend: $90",
+      "lastPaid": null
+    },
+    {
+      "id": "wcs-wednesday",
+      "name": "WCS Wednesday (dance)",
+      "amount": 64.00,
+      "dueDate": "Wednesday",
+      "frequency": "weekly",
+      "category": "other",
+      "notes": "$64/week. Due every Wednesday"
+    },
+    {
+      "id": "dog-food",
+      "name": "Dog Food (Farmer's Dog)",
+      "amount": 122.64,
+      "dueDate": "12",
+      "frequency": "every-56-days",
+      "category": "other",
+      "notes": "Every 56 days. Last charged 2/12, next due: 4/8/26",
+      "lastPaid": "2/12/26"
+    },
+    {
+      "id": "claude-ai",
+      "name": "Claude AI (subscription)",
+      "amount": 100.00,
+      "dueDate": "5",
+      "frequency": "monthly",
+      "category": "subscription",
+      "lastPaid": "2/5/26"
+    },
+    {
+      "id": "federal-taxes",
+      "name": "Federal Taxes",
+      "amount": 226.00,
+      "dueDate": "28",
+      "frequency": "monthly",
+      "category": "other",
+      "notes": "Paid as needed",
+      "lastPaid": "11/27/25"
+    },
+    {
+      "id": "child-support",
+      "name": "Child Support/Copay",
+      "amount": 350.00,
+      "dueDate": "10",
+      "frequency": "monthly",
+      "category": "other",
+      "notes": "Delilah copay",
+      "lastPaid": "1/11/26"
+    },
+    {
+      "id": "delilah-dental-therapy",
+      "name": "Delilah's Dental & Therapy Co-pay",
+      "amount": 91.75,
+      "dueDate": "20",
+      "frequency": "monthly",
+      "category": "other",
+      "notes": "Combined dental + therapy co-pay",
+      "lastPaid": null
+    },
+    {
+      "id": "college-fund",
+      "name": "College Fund (Delilah) - CONTRIBUTION",
+      "amount": 100.00,
+      "dueDate": "8",
+      "frequency": "monthly",
+      "category": "savings",
+      "notes": "Contributing to Delilah's college savings. TODO: Increase amount",
+      "lastPaid": "1/8/26"
+    },
+    {
+      "id": "lawyer-fees-payment",
+      "name": "Lawyer Fees (payment)",
+      "amount": 500.00,
+      "dueDate": "15",
+      "frequency": "monthly",
+      "category": "debt",
+      "notes": "Monthly payment toward lawyer fees debt",
+      "lastPaid": "1/17/26"
+    }
+  ],
+  "debtData": [
+    {
+      "id": "chase-cc",
+      "name": "Chase CC",
+      "balance": 11887.24,
+      "minimumPayment": 373.00,
+      "targetPayment": 600.00,
+      "dueDate": "28",
+      "apr": 26.49,
+      "payoffPriority": 1,
+      "notes": "KILL CHASE FIRST. Min payment: $373, target payment: $600/month",
+      "lastPaid": "12/26/25"
+    },
+    {
+      "id": "onpoint-cc",
+      "name": "OnPoint CC",
+      "balance": 6078.09,
+      "minimumPayment": 124.00,
+      "dueDate": "28",
+      "apr": 15.25,
+      "payoffPriority": 2,
+      "notes": "After Chase done",
+      "lastPaid": "12/26/25"
+    },
+    {
+      "id": "car-loan",
+      "name": "Car Loan",
+      "balance": 14067.04,
+      "minimumPayment": 255.63,
+      "dueDate": "21",
+      "apr": 5.9,
+      "payoffPriority": 3,
+      "notes": "Kill Chase & OnPoint first",
+      "lastPaid": "12/18/25"
+    },
+    {
+      "id": "mom-loan",
+      "name": "Mom Loan",
+      "balance": 36000,
+      "minimumPayment": 1000,
+      "dueDate": "monthly",
+      "apr": 0,
+      "payoffPriority": 4,
+      "notes": "Resume after Chase & OnPoint done. Currently paused."
+    },
+    {
+      "id": "lawyer-fees",
+      "name": "Lawyer Fees",
+      "balance": 26737.78,
+      "minimumPayment": 500,
+      "dueDate": "15",
+      "apr": 6.93,
+      "payoffPriority": 5,
+      "notes": "Steady $500/month payment. APR: 6.93% (calculated 2/13-2/18)"
+    }
+  ],
+  "savingsData": [
+    {
+      "id": "delilah-college-savings",
+      "name": "Delilah's College Fund (529)",
+      "balance": 908.38,
+      "allocation": {
+        "stocks": 41.33,
+        "bonds": 45.67,
+        "cash": 13.0
+      },
+      "targetDate": "2029",
+      "notes": "Current allocation: 41.33% Stocks, 45.67% Bonds, 13% Cash. Monthly contribution: $100 (TODO: increase)",
+      "lastContribution": "1/8/26"
+    }
+  ],
+  "metadata": {
+    "lastUpdated": "2026-02-18T11:48:00Z",
+    "dataSource": "Ben's current financial snapshot with all corrections",
+    "notes": "Includes bi-weekly expenses, auto-pull URLs for variable bills, weekly dance class, 56-day dog food cycle, and Delilah college fund contributions",
+    "totalMonthlyBills": "~$4,500-$5,000 (varies with utilities and bi-weekly items)",
+    "totalMonthlyDebts": "~$1,628 (minimum payments)",
+    "totalMonthlyIncome": "~$7,137 (Centene)"
+  }
+}
