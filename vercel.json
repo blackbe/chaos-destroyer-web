@@ -1,0 +1,6 @@
+{
+  "name": "chaos-destroyer-web",
+  "framework": "vite",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist"
+}
