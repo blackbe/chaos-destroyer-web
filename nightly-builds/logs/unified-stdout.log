@@ -124,3 +124,68 @@ nothing to commit, working tree clean
 ✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-06-hugback-48/ for results.
 ✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-07-chaos-destroyer-49/ for results.
 ✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-07-chaos-destroyer-49/ for results.
+✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-10-chaos-destroyer-55/ for results.
+✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-10-chaos-destroyer-55/ for results.
+[extract-code-blocks.py] Found 4 [FILE:] markers
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/migrations/2024-01-15-age-verification.sql
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/backend/.env.example
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/backend/services/ageVerificationService.js
+[extract-code-blocks.py] WARNING: No code block found after backend/routes/ageVerification.js
+[extract-code-blocks.py] Extraction complete. 3 files written
+
+✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-10-hugback-56/ for results.
+[extract-code-blocks.py] Found 2 [FILE:] markers
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/migrations/2024-01-15-safety-checkins.sql
+[extract-code-blocks.py] WARNING: No code block found after backend/routes/checkins.js
+[extract-code-blocks.py] Extraction complete. 1 files written
+
+✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-10-hugback-58/ for results.
+[extract-code-blocks.py] Found 3 [FILE:] markers
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/README.md
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/migrations/2024-01-15-add-geolocation.sql
+[extract-code-blocks.py] WARNING: No code block found after src/context/LocationContext.js
+[extract-code-blocks.py] Extraction complete. 2 files written
+
+✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-10-hugback-60/ for results.
+[extract-code-blocks.py] Found 2 [FILE:] markers
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/components/Questionnaire/Questionnaire.js
+[extract-code-blocks.py] WARNING: No code block found after src/components/Questionnaire/Questionnaire.css
+[extract-code-blocks.py] Extraction complete. 1 files written
+
+✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-10-hugback-62/ for results.
+[extract-code-blocks.py] Found 3 [FILE:] markers
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/migrations/2024-01-15-compatibility-matching.sql
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/backend/services/compatibilityService.js
+[extract-code-blocks.py] WARNING: No code block found after backend/routes/matches.js
+[extract-code-blocks.py] Extraction complete. 2 files written
+
+[extract-code-blocks.py] Found 3 [FILE:] markers
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/migrations/2024-01-15-compatibility-matching.sql
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/backend/services/compatibilityService.js
+[extract-code-blocks.py] WARNING: No code block found after backend/routes/matches.js
+[extract-code-blocks.py] Extraction complete. 2 files written
+
+✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-11-hugback-63/ for results.
+[extract-code-blocks.py] Found 2 [FILE:] markers
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/components/MoodReasonFilter.js
+[extract-code-blocks.py] WARNING: No code block found after src/components/MoodReasonFilter.css
+[extract-code-blocks.py] Extraction complete. 1 files written
+
+✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-11-hugback-64/ for results.
+[extract-code-blocks.py] Found 5 [FILE:] markers
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/backend/migrations/2024-01-15-user-profiles.sql
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/backend/routes/profiles.js
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/components/Profile.js
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/components/Profile.css
+[extract-code-blocks.py] WARNING: No code block found after src/components/EditProfile.js
+[extract-code-blocks.py] Extraction complete. 4 files written
+
+[extract-code-blocks.py] Found 5 [FILE:] markers
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/backend/migrations/2024-01-15-user-profiles.sql
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/backend/routes/profiles.js
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/components/Profile.js
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/components/Profile.css
+[extract-code-blocks.py] WARNING: No code block found after src/components/EditProfile.js
+[extract-code-blocks.py] Extraction complete. 4 files written
+
+✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-12-hugback-65/ for results.
