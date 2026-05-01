@@ -201,29 +201,22 @@ Start building now! Output complete, practical code."
     ;;
 esac
 
-# ── Run Claude (Anthropic Sonnet) ────────────
+# ── Run Ollama (Local, FREE) ────────────
 cd "$WORKSPACE_DIR"
 
-echo "[$TIMESTAMP] Invoking Claude (Sonnet)..." >> "$LOG_DIR/unified-nightly.log"
+echo "[$TIMESTAMP] Invoking Ollama (llama3.2:3b - LOCAL, FREE)..." >> "$LOG_DIR/unified-nightly.log"
 
-# Call Anthropic API
-RESPONSE=$(curl -s https://api.anthropic.com/v1/messages \
+# Call local Ollama (no API key needed, completely free)
+RESPONSE=$(curl -s http://localhost:11434/api/generate \
   -H "Content-Type: application/json" \
-  -H "x-api-key: $ANTHROPIC_API_KEY" \
-  -H "anthropic-version: 2023-06-01" \
   -d "{
-    \"model\": \"claude-haiku-4-5\",
-    \"max_tokens\": 4000,
-    \"messages\": [
-      {
-        \"role\": \"user\",
-        \"content\": $(echo "$PROMPT" | jq -Rs '.')
-      }
-    ]
+    \"model\": \"llama3.2:3b\",
+    \"prompt\": $(echo "$PROMPT" | jq -Rs '.'),
+    \"stream\": false
   }")
 
-# Extract the response text
-RESPONSE_TEXT=$(echo "$RESPONSE" | jq -r '.content[0].text // .error.message // "Error: Empty response"' 2>/dev/null)
+# Extract the response text (Ollama uses 'response' field, Claude uses 'content[0].text')
+RESPONSE_TEXT=$(echo "$RESPONSE" | jq -r '.response // .content[0].text // .error.message // "Error: Empty response"' 2>/dev/null)
 
 # Save the full response for debugging
 echo "$RESPONSE" > "$TASK_DIR/claude-response.json"
@@ -232,21 +225,19 @@ echo "$RESPONSE" > "$TASK_DIR/claude-response.json"
 echo "$RESPONSE_TEXT" > "$TASK_DIR/generated-output.md"
 
 # Log the usage
-TOKENS_USED=$(echo "$RESPONSE" | jq -r '.usage.output_tokens // "unknown"' 2>/dev/null)
-echo "[$TIMESTAMP] Claude generation completed (Sonnet, tokens: $TOKENS_USED)" >> "$LOG_DIR/unified-nightly.log"
+TOKENS_USED=$(echo "$RESPONSE" | jq -r '.usage.output_tokens // "N/A"' 2>/dev/null)
+echo "[$TIMESTAMP] Ollama generation completed (llama3.2:3b, local)" >> "$LOG_DIR/unified-nightly.log"
 
 # NOTE: Task is NOT marked complete yet — only mark [x] after build + push succeeds
 
-# ── Auto-apply for HUGBACK tasks ────────────
-if [ "$TAG" = "HUGBACK" ]; then
-  echo "[$TIMESTAMP] Auto-applying HUGBACK changes..." >> "$LOG_DIR/unified-nightly.log"
+# ── Auto-apply for ALL projects (HUGBACK + CHAOS-DESTROYER) ────────────
+if [ "$TAG" = "HUGBACK" ] || [ "$TAG" = "CHAOS-DESTROYER" ]; then
+  echo "[$TIMESTAMP] Auto-applying $TAG changes..." >> "$LOG_DIR/unified-nightly.log"
   
   cd "$PROJECT_DIR"
   
-  # Verify project exists
-  if [ ! -f "package.json" ]; then
-    echo "[$TIMESTAMP] ERROR: HugBack project not found at $PROJECT_DIR" >> "$LOG_DIR/unified-nightly.log"
-  else
+  # For both HUGBACK and CHAOS-DESTROYER: extract, build (if npm), commit, push
+  if [ -d ".git" ]; then
     # Step 1: Extract code blocks from generated markdown
     echo "[$TIMESTAMP] Extracting code blocks from generated-output.md..." >> "$LOG_DIR/unified-nightly.log"
     
@@ -269,12 +260,22 @@ if [ "$TAG" = "HUGBACK" ]; then
       echo "[$TIMESTAMP] ⚠️ generated-output.md not found at $GENERATED_MD" >> "$LOG_DIR/unified-nightly.log"
     fi
     
-    # Step 2: Run build to verify no errors (use full path to npm)
-    echo "[$TIMESTAMP] Running npm run build to verify..." >> "$LOG_DIR/unified-nightly.log"
-    if /usr/local/opt/node@22/bin/npm run build >> "$LOG_DIR/unified-nightly.log" 2>&1; then
-      echo "[$TIMESTAMP] ✅ Build succeeded" >> "$LOG_DIR/unified-nightly.log"
-      BUILD_SUCCEEDED=true
-      
+    # Step 2: Run build if this is an npm project (HUGBACK usually is, some CHAOS-DESTROYER aren't)
+    if [ -f "package.json" ]; then
+      echo "[$TIMESTAMP] Running npm run build to verify..." >> "$LOG_DIR/unified-nightly.log"
+      if /usr/local/opt/node@22/bin/npm run build >> "$LOG_DIR/unified-nightly.log" 2>&1; then
+        echo "[$TIMESTAMP] ✅ Build succeeded" >> "$LOG_DIR/unified-nightly.log"
+        BUILD_SUCCEEDED=true
+      else
+        echo "[$TIMESTAMP] ❌ Build failed - review errors in log — Task NOT marked complete" >> "$LOG_DIR/unified-nightly.log"
+        BUILD_SUCCEEDED=false
+      fi
+    else
+      echo "[$TIMESTAMP] ℹ️ No package.json found (non-npm $TAG project) — skipping npm build" >> "$LOG_DIR/unified-nightly.log"
+      BUILD_SUCCEEDED=true  # Skip build check for non-npm projects
+    fi
+    
+    if [ "$BUILD_SUCCEEDED" = true ]; then
       # Step 3: Git commit and push
       echo "[$TIMESTAMP] Staging changes with git add -A..." >> "$LOG_DIR/unified-nightly.log"
       git add -A
@@ -303,11 +304,10 @@ if [ "$TAG" = "HUGBACK" ]; then
           fi
         else
           echo "[$TIMESTAMP] ❌ Commit failed — check git status — Task NOT marked complete" >> "$LOG_DIR/unified-nightly.log"
-        fi
       fi
-    else
-      echo "[$TIMESTAMP] ❌ Build failed - review errors in log — Task NOT marked complete" >> "$LOG_DIR/unified-nightly.log"
     fi
+  else
+    echo "[$TIMESTAMP] ERROR: Project directory not a git repo at $PROJECT_DIR" >> "$LOG_DIR/unified-nightly.log"
   fi
   
   cd "$WORKSPACE_DIR"

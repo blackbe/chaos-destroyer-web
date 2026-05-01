@@ -191,3 +191,98 @@ nothing to commit, working tree clean
 ✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-12-hugback-65/ for results.
 ✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-13-chaos-destroyer-66/ for results.
 ✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-13-chaos-destroyer-66/ for results.
+[extract-code-blocks.py] Found 4 [FILE:] markers
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/migrations/2024-01-15-add-language-support.sql
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/backend/services/translateService.js
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/backend/routes/translate.js
+[extract-code-blocks.py] WARNING: No code block found after frontend/src/hooks/useTranslation.js
+[extract-code-blocks.py] Extraction complete. 3 files written
+
+[extract-code-blocks.py] Found 4 [FILE:] markers
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/migrations/2024-01-15-add-language-support.sql
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/backend/services/translateService.js
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/backend/routes/translate.js
+[extract-code-blocks.py] WARNING: No code block found after frontend/src/hooks/useTranslation.js
+[extract-code-blocks.py] Extraction complete. 3 files written
+
+✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-14-hugback-67/ for results.
+✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-15-chaos-destroyer-68/ for results.
+✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-15-chaos-destroyer-68/ for results.
+✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-16-chaos-destroyer-68/ for results.
+✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-16-chaos-destroyer-68/ for results.
+[extract-code-blocks.py] Found 3 [FILE:] markers
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/migrations/2024-01-15-id-verification.sql
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/components/IDVerification/IDVerificationModal.js
+[extract-code-blocks.py] WARNING: No code block found after src/components/IDVerification/IDVerificationModal.css
+[extract-code-blocks.py] Extraction complete. 2 files written
+
+[extract-code-blocks.py] Found 3 [FILE:] markers
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/README.md
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/migrations/2024-01-15-add-verification.sql
+[extract-code-blocks.py] WARNING: No code block found after src/pages/IDVerification.js
+[extract-code-blocks.py] Extraction complete. 2 files written
+
+✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-17-hugback-69/ for results.
+✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-17-hugback-69/ for results.
+✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-18-chaos-destroyer-70/ for results.
+✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-18-chaos-destroyer-70/ for results.
+[extract-code-blocks.py] Found 2 [FILE:] markers
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/components/LegalPages/TermsOfService.js
+[extract-code-blocks.py] WARNING: No code block found after src/components/LegalPages/PrivacyPolicy.js
+[extract-code-blocks.py] Extraction complete. 1 files written
+
+[extract-code-blocks.py] Found 2 [FILE:] markers
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/components/Legal/TermsOfService.js
+[extract-code-blocks.py] WARNING: No code block found after src/components/Legal/PrivacyPolicy.js
+[extract-code-blocks.py] Extraction complete. 1 files written
+
+✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-19-hugback-71/ for results.
+✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-20-chaos-destroyer-72/ for results.
+✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-20-chaos-destroyer-72/ for results.
+[extract-code-blocks.py] Found 2 [FILE:] markers
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/migrations/2024-01-15-background-check-integration.sql
+[extract-code-blocks.py] WARNING: No code block found after backend/services/checkrService.js
+[extract-code-blocks.py] Extraction complete. 1 files written
+
+[extract-code-blocks.py] Found 2 [FILE:] markers
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/migrations/2024-01-15-background-check-integration.sql
+[extract-code-blocks.py] WARNING: No code block found after backend/services/checkrService.js
+[extract-code-blocks.py] Extraction complete. 1 files written
+
+✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-21-hugback-73/ for results.
+✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-22-chaos-destroyer-74/ for results.
+✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-22-chaos-destroyer-74/ for results.
+[extract-code-blocks.py] Found 2 [FILE:] markers
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/components/InsurancePolicy/InsurancePolicy.js
+[extract-code-blocks.py] WARNING: No code block found after src/components/InsurancePolicy/InsurancePolicy.css
+[extract-code-blocks.py] Extraction complete. 1 files written
+
+[extract-code-blocks.py] Found 2 [FILE:] markers
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/components/InsurancePolicy/InsurancePolicy.js
+[extract-code-blocks.py] WARNING: No code block found after src/components/InsurancePolicy/InsurancePolicy.css
+[extract-code-blocks.py] Extraction complete. 1 files written
+
+✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-23-hugback-75/ for results.
+✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-24-chaos-destroyer-76/ for results.
+✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-24-chaos-destroyer-76/ for results.
+[extract-code-blocks.py] Found 2 [FILE:] markers
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/components/SafetyResources.js
+[extract-code-blocks.py] WARNING: No code block found after src/components/SafetyResources.css
+[extract-code-blocks.py] Extraction complete. 1 files written
+
+[extract-code-blocks.py] Found 2 [FILE:] markers
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/components/SafetyResources.js
+[extract-code-blocks.py] WARNING: No code block found after src/components/SafetyResources.css
+[extract-code-blocks.py] Extraction complete. 1 files written
+
+✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-25-hugback-77/ for results.
+✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-26-chaos-destroyer-78/ for results.
+✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-26-chaos-destroyer-78/ for results.
+✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-27-chaos-destroyer-78/ for results.
+✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-27-chaos-destroyer-78/ for results.
+✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-28-chaos-destroyer-78/ for results.
+✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-28-chaos-destroyer-78/ for results.
+✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-29-chaos-destroyer-78/ for results.
+✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-29-chaos-destroyer-78/ for results.
+✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-30-chaos-destroyer-78/ for results.
+✅ Done! Check /Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-04-30-chaos-destroyer-78/ for results.

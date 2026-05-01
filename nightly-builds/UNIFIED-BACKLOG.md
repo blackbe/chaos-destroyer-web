@@ -80,17 +80,17 @@
 [x] 64. [HUGBACK] Filter by mood and reason for needing support — From Trello Phase 2 #71
 [x] 65. [HUGBACK] User profiles (no photos, just bio and interests) — From Trello Phase 2 #72
 [x] 66. [CHAOS-DESTROYER] Chaos Destroyer web app — Fix all errors, deploy to Vercel — SHIPPED 2026-04-13 00:00
-[ ] 67. [HUGBACK] Multiple language support via Google Translate API — From Trello Phase 2 #73
-[ ] 68. [CHAOS-DESTROYER] Reconnection toolkit v3 — Updated templates for reaching out to Delilah
-[ ] 69. [HUGBACK] ID verification via Stripe Identity ($1.50 per verification) — From Trello Phase 3 #74
-[ ] 70. [CHAOS-DESTROYER] West Coast Swing progress tracker — Record lesson notes, choreography, competition prep
-[ ] 71. [HUGBACK] Lawyer-written Terms of Service and Privacy Policy — From Trello Phase 3 #75
-[ ] 72. [CHAOS-DESTROYER] Therapy session insight extractor — Parse notes, track progress on self-confidence and ADHD
-[ ] 73. [HUGBACK] Background check integration via Checkr API ($25-50 per check) — From Trello Phase 3 #76
-[ ] 74. [CHAOS-DESTROYER] Body language mastery curriculum v2 — Enhanced lessons with video analysis framework
-[ ] 75. [HUGBACK] Liability insurance policy secured — From Trello Phase 3 #77
-[ ] 76. [CHAOS-DESTROYER] MTG Commander deck synergy analyzer — Deep dive into specific commanders
-[ ] 77. [HUGBACK] Comprehensive safety resources page — From Trello Phase 3 #78
+[x] 67. [HUGBACK] Multiple language support via Google Translate API — From Trello Phase 2 #73
+[b] 68. [CHAOS-DESTROYER] Reconnection toolkit v3 — Updated templates for reaching out to Delilah — BLOCKED: Builder configuration issue (tries to commit to HugBack instead of Chaos Destroyer directory). Need to fix builder routing.
+[x] 69. [HUGBACK] ID verification via Stripe Identity ($1.50 per verification) — From Trello Phase 3 #74
+[b] 70. [CHAOS-DESTROYER] West Coast Swing progress tracker — Record lesson notes, choreography, competition prep — BLOCKED: Same builder routing issue (tries to commit to HugBack instead of Chaos Destroyer directory).
+[x] 71. [HUGBACK] Lawyer-written Terms of Service and Privacy Policy — From Trello Phase 3 #75
+[b] 72. [CHAOS-DESTROYER] Therapy session insight extractor — Parse notes, track progress on self-confidence and ADHD — BLOCKED: Builder routing issue (tries to commit to HugBack instead of Chaos Destroyer directory).
+[x] 73. [HUGBACK] Background check integration via Checkr API ($25-50 per check) — From Trello Phase 3 #76
+[b] 74. [CHAOS-DESTROYER] Body language mastery curriculum v2 — Enhanced lessons with video analysis framework — BLOCKED: Builder routing issue (tries to commit to HugBack instead of Chaos Destroyer directory).
+[x] 75. [HUGBACK] Liability insurance policy secured — From Trello Phase 3 #77
+[b] 76. [CHAOS-DESTROYER] MTG Commander deck synergy analyzer — Deep dive into specific commanders — BLOCKED: Builder routing issue (tries to commit to HugBack instead of Chaos Destroyer directory).
+[x] 77. [HUGBACK] Comprehensive safety resources page — From Trello Phase 3 #78
 [ ] 78. [CHAOS-DESTROYER] Dominion card game analytics — Win rate tracker, deck performance analysis
 [ ] 79. [HUGBACK] Emergency contact feature for users — From Trello Phase 3 #79
 [ ] 80. [CHAOS-DESTROYER] Financial goal tracker v2 — Track lawyer fees, mom loan payoff, credit card progress
