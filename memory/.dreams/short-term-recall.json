@@ -1,0 +1,130 @@
+{
+  "version": 1,
+  "updatedAt": "2026-05-02T13:11:04.511Z",
+  "entries": {
+    "memory:memory/2026-02-25.md:1:44": {
+      "key": "memory:memory/2026-02-25.md:1:44",
+      "path": "memory/2026-02-25.md",
+      "startLine": 1,
+      "endLine": 44,
+      "source": "memory",
+      "snippet": "# 2026-02-25 — HugBack MVP Build + Nightly Feature Builds ## Morning Work **HugBack MVP: Complete React + Supabase Mental Health App** - Built full production-ready app (~21 files, 2 hours) - 7 pages, crisis detection, mood tracking, resources - Git repo initialized, ready to deploy - Location: `/Users/benblack/.openclaw/workspace/hugback/` (duplicate build) - Ben's production: `~/hugback` (active) ## Afternoon Work (3 PM+) ### Nightly Build System Setup **Goal:** Build one small HugBack feature automatically every night while Ben sleeps. **What's Running Now (11 PM & 11:30 PM daily):** 1. **Infrastructure Builder** (11:00 PM) - Launchd: `com.hugback.nightly-build` - Script: `~/",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.38252823948860165,
+      "maxScore": 0.38252823948860165,
+      "firstRecalledAt": "2026-05-02T13:11:04.511Z",
+      "lastRecalledAt": "2026-05-02T13:11:04.511Z",
+      "queryHashes": [
+        "e62bf63e7dc9"
+      ],
+      "recallDays": [
+        "2026-05-02"
+      ],
+      "conceptTags": [
+        "production-ready",
+        "users/benblack",
+        "openclaw/workspace/hugback",
+        "com.hugback.nightly-build",
+        "hugback",
+        "mvp",
+        "nightly",
+        "feature"
+      ]
+    },
+    "memory:memory/2026-02-25.md:77:136": {
+      "key": "memory:memory/2026-02-25.md:77:136",
+      "path": "memory/2026-02-25.md",
+      "startLine": 77,
+      "endLine": 136,
+      "source": "memory",
+      "snippet": "```bash launchctl list | grep hugback ``` **Check logs:** ```bash tail -f ~/hugback/nightly-builds/logs/feature-nightly.log ``` **Re-run manually:** ```bash ~/hugback/nightly-build-feature.sh ``` ### Tech Stack for Nightly Builds - **Codex CLI** — AI code generation (gpt-5.2-codex) - **Launchd** — macOS job scheduling - **Bash** — Orchestration scripts - **Supabase SDK** — DB migrations (if needed) ### What Ben Sees Each morning: A new folder with: - `README.md` — Integration guide - `SCREENSHOTS.md` — Code examples - `.jsx` or `.js` files — Ready to copy to src/ - `MORNING-SUMMARY.md` — Quick review - SQL migration (if DB changes needed) - Codex output log --- ## Status ✅ Infrastru",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.37735509872436523,
+      "maxScore": 0.37735509872436523,
+      "firstRecalledAt": "2026-05-02T13:11:04.511Z",
+      "lastRecalledAt": "2026-05-02T13:11:04.511Z",
+      "queryHashes": [
+        "e62bf63e7dc9"
+      ],
+      "recallDays": [
+        "2026-05-02"
+      ],
+      "conceptTags": [
+        "gpt",
+        "re-run",
+        "hugback/nightly-build-feature.sh",
+        "gpt-5.2-codex",
+        "readme.md",
+        "screenshots.md",
+        "morning-summary.md",
+        "bash"
+      ]
+    },
+    "memory:memory/2026-03-30.md:1:38": {
+      "key": "memory:memory/2026-03-30.md:1:38",
+      "path": "memory/2026-03-30.md",
+      "startLine": 1,
+      "endLine": 38,
+      "source": "memory",
+      "snippet": "# Daily Notes — March 30, 2026 ## Nightly Build #29 — COMPLETED ✅ **HugBack Frontend Fix — SUCCESS** **Problem:** - EnvValidator component was calling `/api/validate-env` endpoint that doesn't exist on backend - Frontend stuck on \"Loading...\" forever **Solution:** - Disabled broken EnvValidator component - Restored Login component as main entry point - Built and tested locally — HTML loads correctly now - Pushed to GitHub at 00:45 AM **Status:** - ✅ Frontend build: Success - ✅ Tests: HTML loads, no \"Loading...\" screen - ✅ GitHub push: Committed as \"fix: Disable broken EnvValidator, restore Login component\" - ⏳ Vercel deployment: In progress (auto-deploys on push, ETA 2-3 min) **Next:**",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.35798943936824795,
+      "maxScore": 0.35798943936824795,
+      "firstRecalledAt": "2026-05-02T13:11:04.511Z",
+      "lastRecalledAt": "2026-05-02T13:11:04.511Z",
+      "queryHashes": [
+        "e62bf63e7dc9"
+      ],
+      "recallDays": [
+        "2026-05-02"
+      ],
+      "conceptTags": [
+        "api/validate-env",
+        "auto-deploys",
+        "2-3",
+        "march",
+        "nightly",
+        "completed",
+        "hugback",
+        "frontend"
+      ]
+    },
+    "memory:memory/2026-03-11.md:1:33": {
+      "key": "memory:memory/2026-03-11.md:1:33",
+      "path": "memory/2026-03-11.md",
+      "startLine": 1,
+      "endLine": 33,
+      "source": "memory",
+      "snippet": "# Wednesday, March 11, 2026 ## Heartbeat 5:40 AM ### Blocker Fixed 🔧 - **Issue:** Nightly build launchd plist was pointing to old location (`/Users/benblack/hugback/nightly-build.sh`) - **Impact:** No builds ran Monday or Tuesday nights (missing tasks #19 onward) - **Root Cause:** Previous restructuring moved unified builder to workspace, but plist wasn't updated - **Fix Applied:** Updated launchd plist to point to correct path: - From: `/Users/benblack/hugback/nightly-build.sh` - To: `/Users/benblack/.openclaw/workspace/nightly-builds/scripts/unified-nightly-builder.sh` - Schedule adjusted: 11:30 PM (was 11:00 PM) - Output logs updated to workspace location - **Service reloaded:*",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.3569423526525497,
+      "maxScore": 0.3569423526525497,
+      "firstRecalledAt": "2026-05-02T13:11:04.511Z",
+      "lastRecalledAt": "2026-05-02T13:11:04.511Z",
+      "queryHashes": [
+        "e62bf63e7dc9"
+      ],
+      "recallDays": [
+        "2026-05-02"
+      ],
+      "conceptTags": [
+        "users/benblack",
+        "wednesday",
+        "march",
+        "heartbeat",
+        "blocker",
+        "fixed",
+        "issue",
+        "nightly"
+      ]
+    }
+  }
+}

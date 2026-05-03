@@ -91,8 +91,8 @@
 [x] 75. [HUGBACK] Liability insurance policy secured — From Trello Phase 3 #77
 [b] 76. [CHAOS-DESTROYER] MTG Commander deck synergy analyzer — Deep dive into specific commanders — BLOCKED: Builder routing issue (tries to commit to HugBack instead of Chaos Destroyer directory).
 [x] 77. [HUGBACK] Comprehensive safety resources page — From Trello Phase 3 #78
-[ ] 78. [CHAOS-DESTROYER] Dominion card game analytics — Win rate tracker, deck performance analysis
-[ ] 79. [HUGBACK] Emergency contact feature for users — From Trello Phase 3 #79
+[x] 78. [CHAOS-DESTROYER] Dominion card game analytics — Win rate tracker, deck performance analysis
+[x] 79. [HUGBACK] Emergency contact feature for users — From Trello Phase 3 #79
 [ ] 80. [CHAOS-DESTROYER] Financial goal tracker v2 — Track lawyer fees, mom loan payoff, credit card progress
 [ ] 81. [HUGBACK] Curated list of public meetup locations — From Trello Phase 3 #80
 [ ] 82. [CHAOS-DESTROYER] ADHD & energy management journal — Daily mood, focus, wins, blockers
