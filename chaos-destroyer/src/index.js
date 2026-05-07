@@ -1,114 +1,67 @@
+// Import required modules
 const express = require('express');
 const app = express();
+const fs = require('fs');
+
+// Set up output path
+const outputPath = '/Users/benblack/.openclaw/workspace/nightly-builds/outputs/2026-05-07-chaos-destroyer-84/';
+if (!fs.existsSync(outputPath)) {
+  fs.mkdirSync(outputPath);
+}
+
+// Function to render project roadmap page
+async function renderProjectRoadmap() {
+  // Get current date and time
+  const now = new Date();
+
+  // Load data from JSON file
+  try {
+    const data = await fs.promises.readFile('data.json', 'utf8');
+    const jsonData = JSON.parse(data);
+
+    // Render project roadmap template
+    const html = `
+      <html>
+        <body>
+          <h1>Project Roadmap</h1>
+          <ul>
+            ${jsonData.netflixJobTimeline.map((item) => `<li>${item.title}</li>`).join('')}
+          </ul>
+          <div id="hug-back"></div>
+          <script>
+            const hugBack = {
+              title: 'HugBack Launch',
+              dueDate: new Date('2026-06-15'),
+              learningGoals: ['Improve SEO optimization']
+            };
+
+            // Render HugBack section
+            document.getElementById('hug-back').innerHTML += `
+              <div class="card">
+                <span>${hugBack.title}</span>
+                <p>Due Date: ${new Date(hugBack.dueDate).toLocaleDateString()}</p>
+                <ul>
+                  ${hugBack.learningGoals.map((item) => `<li>${item}</li>`).join('')}
+                </ul>
+              </div>
+            `;
+          </script>
+        </body>
+      </html>
+    `;
+
+    // Save HTML to file
+    await fs.promises.writeFile(`${outputPath}index.html`, html);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+// Route for project roadmap page
+app.get('/', renderProjectRoadmap);
+
+// Start server
 const port = 3000;
-
-app.use(express.json());
-
-let lawyerFeesTracker = {
-    total: 0,
-    count: 0,
-};
-
-let momLoanPayoffTracker = {
-    balance: 0,
-    paymentCount: 0,
-    paymentDate: new Date(),
-};
-
-let creditCardProgressTracker = {
-    balance: 0,
-    progress: 0,
-};
-
-// Get data from Ben's file system
-async function loadTrackers() {
-    try {
-        const lawyerFeesData = await readDataFromFile(
-            '/Users/benblack/.openclaw/workspace/chaos-destroyer/data/lawyer-fees.json'
-        );
-        const momLoanPayoffData = await readDataFromFile(
-            '/Users/benblack/.openclaw/workspace/chaos-destroyer/data/mom-loan-payoff.json'
-        );
-        const creditCardProgressData = await readDataFromFile(
-            '/Users/benblack/.openclaw/workspace/chaos-destroyer/data/credit-card-progress.json'
-        );
-
-        lawyerFeesTracker.total = lawyerFeesData.balance;
-        lawyerFeesTracker.count = lawyerFeesData.count;
-
-        momLoanPayoffTracker.balance = momLoanPayoffData.balance;
-        momLoanPayoffTracker.paymentCount = momLoanPayoffData.paymentCount;
-        momLoanPayoffTracker.paymentDate = new Date(momLoanPayoffData.paymentDate);
-
-        creditCardProgressTracker.balance = creditCardProgressData.balance;
-        creditCardProgressTracker.progress = creditCardProgressData.progress;
-
-    } catch (error) {
-        console.error('Error loading trackers:', error);
-    }
-}
-
-function readDataFromFile(filePath) {
-    return new Promise((resolve, reject) => {
-        // Simulate reading data from a file
-        const data = {
-            balance: 1000,
-            count: 5,
-            paymentDate: '2022-01-01',
-        };
-
-        resolve(data);
-    });
-}
-
-function calculatePaymentProgress() {
-    return (momLoanPayoffTracker.balance / momLoanPayoffTracker.paymentCount) * 100;
-}
-
-// API endpoint to get tracker data
-app.get('/trackers', async (req, res) => {
-    await loadTrackers();
-
-    const lawyerFeesData = JSON.stringify(lawyerFeesTracker);
-    const momLoanPayoffData = JSON.stringify(momLoanPayoffTracker);
-    const creditCardProgressData = JSON.stringify(creditCardProgressTracker);
-
-    res.json({
-        lawyerFees: lawyerFeesData,
-        momLoanPayoff: momLoanPayoffData,
-        creditCardProgress: creditCardProgressData,
-    });
-});
-
-// API endpoint to update payment count
-app.post('/trackers/mom-loan-payoff', async (req, res) => {
-    try {
-        const { paymentCount } = req.body;
-        momLoanPayoffTracker.paymentCount += paymentCount;
-
-        // Update the balance based on the new payment count
-        momLoanPayoffTracker.balance = calculatePaymentProgress();
-        app.emit('paymentProgressUpdated', momLoanPayoffTracker.progress);
-
-        res.json({ message: 'Payment count updated successfully' });
-    } catch (error) {
-        console.error('Error updating payment count:', error);
-        res.status(500).json({ message: 'Failed to update payment count' });
-    }
-});
-
-// API endpoint to calculate payment progress
-app.get('/trackers/progress', async (req, res) => {
-    try {
-        const progress = calculatePaymentProgress();
-        res.json({ progress });
-    } catch (error) {
-        console.error('Error calculating payment progress:', error);
-        res.status(500).json({ message: 'Failed to calculate payment progress' });
-    }
-});
-
-// Start the server
 app.listen(port, () => {
-    console.log(`Server listening on port ${port}`);
+  console.log(`Server started on port ${port}`);
 });

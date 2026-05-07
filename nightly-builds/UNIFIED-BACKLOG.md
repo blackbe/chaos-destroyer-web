@@ -93,10 +93,10 @@
 [x] 77. [HUGBACK] Comprehensive safety resources page — From Trello Phase 3 #78
 [x] 78. [CHAOS-DESTROYER] Dominion card game analytics — Win rate tracker, deck performance analysis
 [x] 79. [HUGBACK] Emergency contact feature for users — From Trello Phase 3 #79
-[ ] 80. [CHAOS-DESTROYER] Financial goal tracker v2 — Track lawyer fees, mom loan payoff, credit card progress
-[ ] 81. [HUGBACK] Curated list of public meetup locations — From Trello Phase 3 #80
-[ ] 82. [CHAOS-DESTROYER] ADHD & energy management journal — Daily mood, focus, wins, blockers
-[ ] 83. [HUGBACK] Safety quiz that users must pass before first meetup — From Trello Phase 3 #81
+[x] 80. [CHAOS-DESTROYER] Financial goal tracker v2 — Track lawyer fees, mom loan payoff, credit card progress
+[x] 81. [HUGBACK] Curated list of public meetup locations — From Trello Phase 3 #80
+[b] 82. [CHAOS-DESTROYER] ADHD & energy management journal — Daily mood, focus, wins, blockers — BLOCKED: Ollama generated absolute paths (~/.../...) instead of relative paths (src/journal/...). Extractor needs relative paths. Fix: Update prompt to request relative paths only.
+[b] 83. [HUGBACK] Safety quiz that users must pass before first meetup — From Trello Phase 3 #81 — BLOCKED: Ollama generated code without [FILE:] markers (used markdown headers). Need more explicit prompt showing exact [FILE: path] format with examples.
 [ ] 84. [CHAOS-DESTROYER] Personal project roadmap v2 — Netflix job timeline, HugBack launch, learning goals
 [ ] 85. [HUGBACK] Opt-in toggle for physical meetups (default: off) — From Trello Phase 4 #82
 [ ] 86. [CHAOS-DESTROYER] Time tracking & productivity dashboard — See where hours go, optimize deep work blocks

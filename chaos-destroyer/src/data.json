@@ -1,0 +1,12 @@
+{
+  "netflixJobTimeline": [
+    { title: 'Project Planning', dueDate: '2026-05-31' },
+    { title: 'Project Development', dueDate: '2026-06-15' },
+    { title: 'Testing and Debugging', dueDate: '2026-06-29' }
+  ],
+  "hugBackLaunch": {
+    title: 'HugBack Launch',
+    dueDate: '2026-06-15',
+    learningGoals: ['Improve SEO optimization']
+  }
+}

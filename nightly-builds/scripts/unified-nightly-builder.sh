@@ -116,10 +116,32 @@ $TASK_DESC
 
 INSTRUCTIONS:
 1. Build a complete, testable implementation
-2. For EVERY code file, use this format:
-   [FILE: path/to/filename.js]
+2. For EVERY code file, use EXACTLY this format:
+   [FILE: src/components/MyComponent.js]
    \`\`\`jsx
-   // code here
+   // your code goes here
+   \`\`\`
+   
+   DO NOT use markdown headers like **MyComponent.js**
+   DO NOT use tildes or absolute paths like ~/... or /Users/.../...
+   DO use relative paths: src/components/, src/pages/, backend/routes/, migrations/
+   
+   EXAMPLES OF CORRECT FORMAT:
+   [FILE: src/components/LoginForm.js]
+   \`\`\`jsx
+   import React from 'react';
+   // React code here
+   \`\`\`
+   
+   [FILE: src/styles/LoginForm.css]
+   \`\`\`css
+   .login-form { ... }
+   \`\`\`
+   
+   [FILE: backend/routes/auth.js]
+   \`\`\`javascript
+   const express = require('express');
+   // Express code here
    \`\`\`
 3. **CRITICAL: If you create a React component with imports like './ComponentName.css', you MUST also create the CSS file with [FILE: path/to/ComponentName.css] in the same output.**
 4. Include a README.md with:
@@ -156,6 +178,8 @@ Start building now! Output complete, working code."
     ;;
   CHAOS-DESTROYER)
     PROMPT="You are Minimi, a personal life-organizing assistant. You're building a tool or project for Ben's life organization (Chaos Destroyer).
+
+CRITICAL: Use RELATIVE paths only (src/journal/index.js, NOT ~/.../src/journal/index.js or /Users/benblack/...). 
 
 PROJECT CONTEXT:
 - This is Ben's personal workspace: ~/.openclaw/workspace/chaos-destroyer/
