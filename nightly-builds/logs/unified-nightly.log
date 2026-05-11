@@ -2606,3 +2606,64 @@ To https://github.com/blackbe/hugback.git
 [extract-code-blocks.py] No [FILE:] markers found. Trying fallback extraction...
 [extract-code-blocks.py] Extraction complete. 0 files written
 
+[2026-05-08_00-00-00] Starting task #85 [HUGBACK]: Opt-in toggle for physical meetups (default: off) — From Trello Phase 4 #82
+[2026-05-08_00-00-00] Starting task #85 [HUGBACK]: Opt-in toggle for physical meetups (default: off) — From Trello Phase 4 #82
+[2026-05-08_00-00-00] Invoking Ollama (llama3.2:3b - LOCAL, FREE)...
+[2026-05-08_00-00-00] Invoking Ollama (llama3.2:3b - LOCAL, FREE)...
+[2026-05-08_00-00-00] Ollama generation completed (llama3.2:3b, local)
+[2026-05-08_00-00-00] Ollama generation completed (llama3.2:3b, local)
+[extract-code-blocks.py] Found 8 [FILE:] markers
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/components/MeetupToggle.js
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/styles/MeetupToggle.css
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/components/MeetupForm.js
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/pages/Home.js
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/components/Profile.js
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/styles/Profile.css
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/backend/routes/api.js
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/migrations/2023-03-01-enable-meetups.sql
+[extract-code-blocks.py] Extraction complete. 8 files written
+
+[2026-05-09_00-00-00] Starting task #52 [HUGBACK]: Simple flagging system for concerning messages (manual review queue, not AI) — From Trello Phase 2 #57
+[2026-05-09_00-00-00] Starting task #52 [HUGBACK]: Simple flagging system for concerning messages (manual review queue, not AI) — From Trello Phase 2 #57
+[2026-05-09_00-00-00] Invoking Ollama (llama3.2:3b - LOCAL, FREE)...
+[2026-05-09_00-00-00] Invoking Ollama (llama3.2:3b - LOCAL, FREE)...
+[2026-05-09_00-00-00] Ollama generation completed (llama3.2:3b, local)
+[2026-05-09_00-00-00] Ollama generation completed (llama3.2:3b, local)
+[extract-code-blocks.py] Found 11 [FILE:] markers
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/components/ConcernMessageFlag.js
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/components/ConcernMessageFlagForm.js
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/pages/Home.js
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/components/Concerns.js
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/pages/Flags.js
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/components/FlaggedMessage.js
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/backend/routes/api.js
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/styles/Concerns.css
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/components/ConcernMessageFlag.css
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/pages/Home.css
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/migrations/2023-03-16-create-flags-table.sql
+[extract-code-blocks.py] Extraction complete. 11 files written
+
+[2026-05-10_00-00-00] Starting task #54 [HUGBACK]: Language selector dropdown (static strings, no API translation) — From Trello Phase 2 #58
+[2026-05-10_00-00-00] Starting task #54 [HUGBACK]: Language selector dropdown (static strings, no API translation) — From Trello Phase 2 #58
+[2026-05-10_00-00-00] Invoking Ollama (llama3.2:3b - LOCAL, FREE)...
+[2026-05-10_00-00-00] Invoking Ollama (llama3.2:3b - LOCAL, FREE)...
+[2026-05-10_00-00-00] Ollama generation completed (llama3.2:3b, local)
+[2026-05-10_00-00-00] Ollama generation completed (llama3.2:3b, local)
+[extract-code-blocks.py] Found 9 [FILE:] markers
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/components/LanguageSelector.js
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/styles/LanguageSelector.css
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/components/LoginForm.js
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/styles/LoginForm.css
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/backend/routes/auth.js
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/pages/Home.js
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/components/StoryWall.js
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/backend/migrations/2023-12-15-add-language-selector.sql
+[extract-code-blocks.py] ✅ Wrote /Users/benblack/hugback/src/components/StoryWall.css
+[extract-code-blocks.py] Extraction complete. 9 files written
+
+[2026-05-11_00-00-00] Starting task #68 [CHAOS-DESTROYER]: Reconnection toolkit v3 — Updated templates for reaching out to Delilah
+[2026-05-11_00-00-00] Starting task #68 [CHAOS-DESTROYER]: Reconnection toolkit v3 — Updated templates for reaching out to Delilah
+[2026-05-11_00-00-00] Invoking Ollama (llama3.2:3b - LOCAL, FREE)...
+[2026-05-11_00-00-00] Invoking Ollama (llama3.2:3b - LOCAL, FREE)...
+[2026-05-11_00-00-00] Ollama generation completed (llama3.2:3b, local)
+[2026-05-11_00-00-00] Ollama generation completed (llama3.2:3b, local)

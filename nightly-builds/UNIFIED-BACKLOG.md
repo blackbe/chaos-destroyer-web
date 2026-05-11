@@ -65,9 +65,9 @@
 [x] 49. [CHAOS-DESTROYER] Deploy Chaos Destroyer web UI somewhere (Vercel)
 [x] 50. [HUGBACK] Meetup coordination (like Meetup.com) — From Trello Phase 2 #56
 [x] 51. [CHAOS-DESTROYER] MTG deck builder assistant — Parse card lists, suggest synergies, cost analysis
-[b] 52. [HUGBACK] AI moderation system (expensive, complex) — From Trello Phase 2 #57 — BLOCKED: Ollama hangs on complex generation (2026-04-08). Will revisit with better model setup.
+[x] 52. [HUGBACK] Simple flagging system for concerning messages (manual review queue, not AI) — From Trello Phase 2 #57
 [x] 53. [CHAOS-DESTROYER] Body language mastery curriculum — Structured lesson tracker with exercises
-[b] 54. [HUGBACK] Multi-language support (translation API) — From Trello Phase 2 #58 — BLOCKED: Ollama hangs (same as #52, 2026-04-09 12:03 UTC)
+[x] 54. [HUGBACK] Language selector dropdown (static strings, no API translation) — From Trello Phase 2 #58
 [x] 55. [CHAOS-DESTROYER] Credit card paydown tracker — Visual progress on debt reduction goals — SHIPPED 2026-04-10 00:01 (Claude Haiku)
 [x] 56. [HUGBACK] Age verification (third-party service) - 18+ only — From Trello Phase 2 #59
 [s] 57. [CHAOS-DESTROYER] Dominion card game tracker — Track wins/losses, deck ideas, strategic notes from Monday games
@@ -81,24 +81,24 @@
 [x] 65. [HUGBACK] User profiles (no photos, just bio and interests) — From Trello Phase 2 #72
 [x] 66. [CHAOS-DESTROYER] Chaos Destroyer web app — Fix all errors, deploy to Vercel — SHIPPED 2026-04-13 00:00
 [x] 67. [HUGBACK] Multiple language support via Google Translate API — From Trello Phase 2 #73
-[b] 68. [CHAOS-DESTROYER] Reconnection toolkit v3 — Updated templates for reaching out to Delilah — BLOCKED: Builder configuration issue (tries to commit to HugBack instead of Chaos Destroyer directory). Need to fix builder routing.
+[ ] 68. [CHAOS-DESTROYER] Reconnection toolkit v3 — Updated templates for reaching out to Delilah
 [x] 69. [HUGBACK] ID verification via Stripe Identity ($1.50 per verification) — From Trello Phase 3 #74
-[b] 70. [CHAOS-DESTROYER] West Coast Swing progress tracker — Record lesson notes, choreography, competition prep — BLOCKED: Same builder routing issue (tries to commit to HugBack instead of Chaos Destroyer directory).
+[ ] 70. [CHAOS-DESTROYER] West Coast Swing progress tracker — Record lesson notes, choreography, competition prep
 [x] 71. [HUGBACK] Lawyer-written Terms of Service and Privacy Policy — From Trello Phase 3 #75
-[b] 72. [CHAOS-DESTROYER] Therapy session insight extractor — Parse notes, track progress on self-confidence and ADHD — BLOCKED: Builder routing issue (tries to commit to HugBack instead of Chaos Destroyer directory).
+[ ] 72. [CHAOS-DESTROYER] Therapy session insight extractor — Parse notes, track progress on self-confidence and ADHD
 [x] 73. [HUGBACK] Background check integration via Checkr API ($25-50 per check) — From Trello Phase 3 #76
-[b] 74. [CHAOS-DESTROYER] Body language mastery curriculum v2 — Enhanced lessons with video analysis framework — BLOCKED: Builder routing issue (tries to commit to HugBack instead of Chaos Destroyer directory).
+[ ] 74. [CHAOS-DESTROYER] Body language mastery curriculum v2 — Enhanced lessons with video analysis framework
 [x] 75. [HUGBACK] Liability insurance policy secured — From Trello Phase 3 #77
-[b] 76. [CHAOS-DESTROYER] MTG Commander deck synergy analyzer — Deep dive into specific commanders — BLOCKED: Builder routing issue (tries to commit to HugBack instead of Chaos Destroyer directory).
+[ ] 76. [CHAOS-DESTROYER] MTG Commander deck synergy analyzer — Deep dive into specific commanders
 [x] 77. [HUGBACK] Comprehensive safety resources page — From Trello Phase 3 #78
 [x] 78. [CHAOS-DESTROYER] Dominion card game analytics — Win rate tracker, deck performance analysis
 [x] 79. [HUGBACK] Emergency contact feature for users — From Trello Phase 3 #79
 [x] 80. [CHAOS-DESTROYER] Financial goal tracker v2 — Track lawyer fees, mom loan payoff, credit card progress
 [x] 81. [HUGBACK] Curated list of public meetup locations — From Trello Phase 3 #80
-[b] 82. [CHAOS-DESTROYER] ADHD & energy management journal — Daily mood, focus, wins, blockers — BLOCKED: Ollama generated absolute paths (~/.../...) instead of relative paths (src/journal/...). Extractor needs relative paths. Fix: Update prompt to request relative paths only.
-[b] 83. [HUGBACK] Safety quiz that users must pass before first meetup — From Trello Phase 3 #81 — BLOCKED: Ollama generated code without [FILE:] markers (used markdown headers). Need more explicit prompt showing exact [FILE: path] format with examples.
-[ ] 84. [CHAOS-DESTROYER] Personal project roadmap v2 — Netflix job timeline, HugBack launch, learning goals
-[ ] 85. [HUGBACK] Opt-in toggle for physical meetups (default: off) — From Trello Phase 4 #82
+[ ] 82. [CHAOS-DESTROYER] ADHD & energy management journal — Daily mood, focus, wins, blockers
+[ ] 83. [HUGBACK] Safety quiz that users must pass before first meetup — From Trello Phase 3 #81
+[x] 84. [CHAOS-DESTROYER] Personal project roadmap v2 — Netflix job timeline, HugBack launch, learning goals
+[x] 85. [HUGBACK] Opt-in toggle for physical meetups (default: off) — From Trello Phase 4 #82
 [ ] 86. [CHAOS-DESTROYER] Time tracking & productivity dashboard — See where hours go, optimize deep work blocks
 [ ] 87. [HUGBACK] Public location coordination system — From Trello Phase 4 #83
 [ ] 88. [CHAOS-DESTROYER] Career progression tracker — Document growth, skills learned, interview prep
