@@ -1,4 +1,8 @@
-const getWins = async (startDate, endDate) => {
-    const response = await apiService(`https://api.dominioncardgame.com/wins?start_date=${startDate}&end_date=${endDate}`, 'GET');
-    return response.data;
-};
+[
+  {
+    "body": "Your self-confidence level for this week is: 80%"
+  },
+  {
+    "body": "You have been struggling with ADHD symptoms lately."
+  }
+]
