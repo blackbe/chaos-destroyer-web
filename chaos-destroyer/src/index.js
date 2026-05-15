@@ -1,13 +1,10 @@
 import React from 'react';
-import ReconnectionToolkit from './ReconnectionToolkit';
+import ReactDOM from 'react-dom';
+import App from './App';
 
-const App = () => {
-  return (
-    <div>
-      <h1>Chaos Destroyer</h1>
-      <ReconnectionToolkit />
-    </div>
-  );
-};
-
-export default App;
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);

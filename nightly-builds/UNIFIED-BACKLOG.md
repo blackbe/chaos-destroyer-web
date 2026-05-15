@@ -87,7 +87,7 @@
 [x] 71. [HUGBACK] Lawyer-written Terms of Service and Privacy Policy — From Trello Phase 3 #75
 [x] 72. [CHAOS-DESTROYER] Therapy session insight extractor — Parse notes, track progress on self-confidence and ADHD
 [x] 73. [HUGBACK] Background check integration via Checkr API ($25-50 per check) — From Trello Phase 3 #76
-[ ] 74. [CHAOS-DESTROYER] Body language mastery curriculum v2 — Enhanced lessons with video analysis framework
+[x] 74. [CHAOS-DESTROYER] Body language mastery curriculum v2 — Enhanced lessons with video analysis framework
 [x] 75. [HUGBACK] Liability insurance policy secured — From Trello Phase 3 #77
 [ ] 76. [CHAOS-DESTROYER] MTG Commander deck synergy analyzer — Deep dive into specific commanders
 [x] 77. [HUGBACK] Comprehensive safety resources page — From Trello Phase 3 #78
