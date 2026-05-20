@@ -1,0 +1,62 @@
+/**
+ * HTML template for the career tracker
+ */
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Career Tracker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>Career Tracker</h1>
+  <button id="add-entry-btn">Add Entry</button>
+  <button id="update-entry-btn">Update Entry</button>
+  <button id="delete-entry-btn">Delete Entry</button>
+
+  <div id="entry-list"></div>
+
+  <script src="index.js"></script>
+  <script src="data.js"></script>
+  <script>
+    const tracker = new CareerTracker();
+    const entryList = document.getElementById('entry-list');
+
+    addEntryBtn.addEventListener('click', async () => {
+      const jobTitle = prompt('Enter job title');
+      const company = prompt('Enter company name');
+      const startDate = prompt('Enter start date (YYYY-MM-DD)');
+      const endDate = prompt('Enter end date (YYYY-MM-DD)');
+
+      const entry = await tracker.addEntry(jobTitle, company, startDate, endDate);
+      const entryHtml = `
+        <p id="entry-${entry.id}">
+          ${entry.jobTitle}
+          (${company})
+          (${startDate}) - (${endDate ? `${endDate}` : 'Present'})
+        </p>
+      `;
+
+      entryList.innerHTML += entryHtml;
+    });
+
+    updateEntryBtn.addEventListener('click', async () => {
+      const id = prompt('Enter entry ID');
+      const updatedFields = await tracker.updateEntry(id, { endDate: '2025-12-31' });
+      console.log(updatedFields);
+    });
+
+    deleteEntryBtn.addEventListener('click', async () => {
+      const id = prompt('Enter entry ID');
+      await tracker.deleteEntry(id);
+      console.log(tracker.getEntries());
+    });
+  </script>
+</body>
+</html>

@@ -99,8 +99,8 @@
 [x] 83. [HUGBACK] Safety quiz that users must pass before first meetup — From Trello Phase 3 #81
 [x] 84. [CHAOS-DESTROYER] Personal project roadmap v2 — Netflix job timeline, HugBack launch, learning goals
 [x] 85. [HUGBACK] Opt-in toggle for physical meetups (default: off) — From Trello Phase 4 #82
-[ ] 86. [CHAOS-DESTROYER] Time tracking & productivity dashboard — See where hours go, optimize deep work blocks
-[ ] 87. [HUGBACK] Public location coordination system — From Trello Phase 4 #83
+[x] 86. [CHAOS-DESTROYER] Time tracking & productivity dashboard — See where hours go, optimize deep work blocks
+[x] 87. [HUGBACK] Public location coordination system — From Trello Phase 4 #83
 [ ] 88. [CHAOS-DESTROYER] Career progression tracker — Document growth, skills learned, interview prep
 [ ] 89. [HUGBACK] Safety check-in: 'Did you meet safely?' post-meetup — From Trello Phase 4 #84
 [ ] 90. [CHAOS-DESTROYER] Weekend social calendar planner — Suggest activities, track West Coast Swing events
