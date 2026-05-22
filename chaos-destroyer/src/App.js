@@ -1,20 +1,15 @@
 import React from 'react';
-import CommanderDeck from './components/CommanderDeck';
-import CommanderDeckList from './components/CommanderDeckList';
+import WCSchedule from './components/WCSchedule';
+import WCScheduleList from './components/WCScheduleList';
 
-const App = () => {
-  const [deck, setDeck] = React.useState([
-    { id: 'Atraxa, Praetors\'s Voice', commanderId: 'Atraxa, Praetors\'s Voice' },
-    { id: 'Griselbrand', commanderId: 'Griselbrand' },
-  ]);
-
+function App() {
   return (
     <div>
-      <h1>Commander Deck Synergy Analyzer</h1>
-      <CommanderDeck deck={deck} commanders={CommanderData} />
-      <CommanderDeckList />
+      <h1>Weekend Social Calendar</h1>
+      <WCSchedule />
+      <WCScheduleList />
     </div>
   );
-};
+}
 
 export default App;
