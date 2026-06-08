@@ -206,8 +206,8 @@ if [ "$TAG" = "HUGBACK" ] || [ "$TAG" = "CHAOS-DESTROYER" ]; then
     fi
     
     if [ "$BUILD_SUCCEEDED" = true ]; then
-      # Step 3: Git commit and push — run from workspace root where .git lives
-      cd "$WORKSPACE_DIR"
+      # Step 3: Git commit and push — run from the project directory (each project has its own .git)
+      cd "$PROJECT_DIR"
       echo "[$TIMESTAMP] Staging changes with git add -A..." >> "$LOG_DIR/unified-nightly.log"
       git add -A
       
@@ -239,7 +239,7 @@ if [ "$TAG" = "HUGBACK" ] || [ "$TAG" = "CHAOS-DESTROYER" ]; then
       fi
     fi
   else
-    echo "[$TIMESTAMP] ERROR: Workspace is not a git repo at $WORKSPACE_DIR" >> "$LOG_DIR/unified-nightly.log"
+    echo "[$TIMESTAMP] ERROR: No .git found in $PROJECT_DIR — cannot commit/push" >> "$LOG_DIR/unified-nightly.log"
   fi
   
   cd "$WORKSPACE_DIR"
