@@ -72,7 +72,7 @@ def extract_code_blocks(markdown_file, output_base_dir, log_file=None):
     if len(files_written) == 0:
         log(f"[extract-code-blocks.py] No [FILE:] markers found. Trying fallback extraction...")
         
-        # Pattern: // File: path.js or similar at start of code block
+        # Pattern: // File: path.js or // path/filename.js at start of code block
         fallback_pattern = r'```(?:jsx?|tsx?|sql|css|html)?\n\s*(?://|#|--)\s*[Ff]ile:\s*([^\n]+)\n(.*?)```'
         
         for match in re.finditer(fallback_pattern, content, re.DOTALL):
@@ -90,6 +90,72 @@ def extract_code_blocks(markdown_file, output_base_dir, log_file=None):
                 log(f"[extract-code-blocks.py] ✅ (fallback) Wrote {full_path}")
             except Exception as e:
                 log(f"[extract-code-blocks.py] ERROR writing {full_path}: {e}")
+        
+        # Also try: // components/Dashboard.js (without "File:")
+        bare_comment_pattern = r'```(?:jsx?|tsx?|javascript|sql|css|html)?\n\s*//\s*([\w/-]+\.jsx?)\n(.*?)```'
+        
+        for match in re.finditer(bare_comment_pattern, content, re.DOTALL):
+            file_path_rel = match.group(1).strip()
+            code_content = match.group(2).rstrip()
+            
+            if len(code_content) > 50 and file_path_rel:  # Only save meaningful files
+                # Smart path mapping: redirect bare React files to src/components/
+                is_react = any(x in code_content for x in ['from \'react\'', 'from "react"', 'import React', 'export default'])
+                
+                # If it's a React file without 'src/' prefix, add it
+                if is_react and not file_path_rel.startswith('src/'):
+                    file_path_rel = 'src/' + file_path_rel
+                
+                full_path = os.path.join(output_base_dir, file_path_rel)
+                dir_path = os.path.dirname(full_path)
+                
+                try:
+                    os.makedirs(dir_path, exist_ok=True)
+                    with open(full_path, 'w') as f:
+                        f.write(code_content)
+                    files_written.append(full_path)
+                    log(f"[extract-code-blocks.py] ✅ (bare-comment) Wrote {full_path}")
+                except Exception as e:
+                    log(f"[extract-code-blocks.py] ERROR writing {full_path}: {e}")
+    
+    # ===== METHOD 3: Pattern-based extraction for React/SQL/structured code =====
+    # Detect and extract based on file naming patterns in headers and structure
+    if len(files_written) == 0:
+        log(f"[extract-code-blocks.py] Trying pattern-based extraction...")
+        
+        # Pattern: ### filename.jsx OR **filename** followed by ``` block
+        # Also handles: ### filename (no backticks)
+        pattern_pattern = r'(?:###\s+[`"]([\w/-]+\.(?:js|jsx|ts|tsx|sql|css|html)[`"])\s*\n|###\s+([\w/-]+\.(?:js|jsx|ts|tsx|sql|css|html))\s*\n|\*\*([\w/-]+\.(?:js|jsx|ts|tsx|sql|css|html))\*\*\s*\n)(?:```(?:jsx?|tsx?|sql|css|html)?\n)?(.*?)(?=```\n\n?(?:###|\*\*|$))'
+        
+        for match in re.finditer(pattern_pattern, content, re.DOTALL):
+            file_path_rel = (match.group(1) or match.group(2) or match.group(3) or '').strip()
+            if not file_path_rel:
+                continue
+            code_content = match.group(4).rstrip()
+            
+            if len(code_content) > 50:  # Only save meaningful files
+                # Smart path mapping: redirect bare React files to src/components/
+                # (chaos-destroyer uses TypeScript + src/ structure)
+                is_react = any(x in code_content for x in ['from \'react\'', 'from "react"', 'import React', 'export default'])
+                is_css = file_path_rel.endswith('.css')
+                
+                # If filename is bare (no dir prefix) and it's a React/CSS file, map to src/
+                if is_react and '/' not in file_path_rel and not file_path_rel.startswith('src/'):
+                    file_path_rel = 'src/components/' + file_path_rel
+                elif is_css and '/' not in file_path_rel and not file_path_rel.startswith('src/'):
+                    file_path_rel = 'src/components/' + file_path_rel
+                
+                full_path = os.path.join(output_base_dir, file_path_rel)
+                dir_path = os.path.dirname(full_path)
+                
+                try:
+                    os.makedirs(dir_path, exist_ok=True)
+                    with open(full_path, 'w') as f:
+                        f.write(code_content)
+                    files_written.append(full_path)
+                    log(f"[extract-code-blocks.py] ✅ (pattern) Wrote {full_path}")
+                except Exception as e:
+                    log(f"[extract-code-blocks.py] ERROR writing {full_path}: {e}")
     
     log(f"[extract-code-blocks.py] Extraction complete. {len(files_written)} files written\n")
     return len(files_written) > 0
