@@ -74,22 +74,38 @@
 
 ## Unified Nightly Build System (Active - Ollama llama3.2:3b)
 - **Single Builder:** `~/.openclaw/workspace/nightly-builds/scripts/unified-nightly-builder.sh`
-- **Schedule:** 00:00 (midnight) daily
+- **Schedule:** 00:00 (midnight) daily via launchd
 - **Model:** Ollama llama3.2:3b (FREE, local)
 - **Backlog:** `~/.openclaw/workspace/nightly-builds/UNIFIED-BACKLOG.md` 
 - **Output:** `~/.openclaw/workspace/nightly-builds/outputs/YYYY-MM-DD-{hugback|chaos-destroyer}-N/`
-- **Status:** 🟢 **ONLINE & SHIPPING (2026-04-07 12:05 PM)**
-- **Today's Wins (2026-04-07):**
-  - ✅ Fixed & shipped Task #46 (Support board) — manually fixed App.js/index.js, committed & pushed
-  - ✅ Fixed & shipped Task #48 (Real-time chat) — same fix, now in production
-  - ✅ Built & shipped Task #50 (Meetup coordination) — created MeetupCoordination component, API routes, integrated to Navbar, deployed to Vercel
-  - ✅ Generated Task #51 (MTG deck builder) — Chaos Destroyer project, code generated & documented
-- **Script Improvements (2026-04-07):**
-  - Completion gating: tasks only mark `[x]` if build AND push both succeed (prevents shipping broken code)
-  - Morning summaries now show ✅ SHIPPED or ⚠️ BUILD FAILED status
-- **Progress:** 31/83 tasks complete (37% shipped!). Task #50 brings HugBack to 22 deployed features.
-- **Budget Status:** $0.027/$1.00 spent (plenty of room)
-- **Next:** Task #52 (HugBack - AI moderation system) or Task #53 (Body language mastery curriculum)
+- **Status:** 🟢 **ONLINE & SHIPPING (2026-06-21)**
+
+### Critical: FILE: Marker Requirement
+**The model MUST use `[FILE: path/to/file.js]` markers** — without these, the code extractor finds nothing and files don't get created. Prompt instructions updated (2026-06-21) to be more explicit about this requirement.
+
+### What Happened (June 2026)
+- May 27 - June 7: ~15 runs failed because model used `**filename**` headers instead of `[FILE:]` markers
+- June 10-20: Task #94 (book tracker) ran 11 times, failed every time — same marker issue
+- June 21: Fixed prompt, manually recovered files, committed to git
+- Prompt now strongly emphasizes: `[FILE:]` on its own line BEFORE code blocks
+
+### Ben's Preferences (2026-06-21)
+- **DO NOT skip tasks** — fix issues and complete before moving on
+- **Verify extraction worked** before declaring a task done
+- **Retry on failure** — if 0 files extracted, re-run with better prompt or manual intervention
+- **No automatic task skipping** — Ben wants everything properly shipped
+
+### Progress
+- Tasks shipped: ~40/103 (as of 2026-06-21)
+- HugBack: 22+ features deployed
+- Chaos Destroyer: Book tracker, article tracker, utilities recovered (2026-06-21)
+- **Next pending task:** #95 (HugBack - 24-hour cooling-off period)
+
+### If Extraction Fails
+1. Check generated-output.md for `[FILE:]` markers
+2. If missing, manually create files from markdown content
+3. Commit and push manually if needed
+4. Mark task complete only after verified ship
 
 ### Project Separation (2026-03-08)
 - **HugBack repo:** Clean (src/, backend/, package.json only) — nightly infrastructure removed
@@ -124,18 +140,18 @@
 - **Procedure:** Create new key in Anthropic console, update ANTHROPIC_API_KEY in ~/.env, delete old key
 - **Last rotated:** 2026-02-22
 
-## Provider Strategy (2026-02-26)
-**Switched to multi-provider approach to save costs:**
-- **Ollama (llama3.2:3b)** → Heartbeat daemon (FREE, local)
+## Provider Strategy (2026-05-27 — UPDATED)
+**Multi-provider approach for maximum cost savings:**
+- **Ollama (llama3.2:3b)** → Heartbeat daemon + Main session (FREE, local) ✅ NEW
 - **OpenAI gpt-4o-mini** → Nightly builds (CHEAP, ~$0.019 per 10k tokens)
 - **Claude Sonnet** → Heavy lifting only (Netflix resume, complex reasoning)
 
 **Cost comparison:**
-- Claude Haiku: $0.80 per 1M input tokens
-- OpenAI gpt-4o-mini: $0.15 per 1M input tokens (5.3x cheaper)
+- Claude Haiku: $0.80 per 1M input tokens (NO LONGER USED)
+- OpenAI gpt-4o-mini: $0.15 per 1M input tokens (5.3x cheaper than Haiku)
 - Ollama: FREE (local)
 
-**Savings:** ~$15-20/month switching to OpenAI for nightly builds
+**Savings:** Changed default model from Haiku → Ollama. Expected reduction: $0.3-0.4/day → ~$0/day for main session work. Total monthly savings: ~$25-30/month.
 
 ## Known Issues & Fixes (2026-02-27)
 
