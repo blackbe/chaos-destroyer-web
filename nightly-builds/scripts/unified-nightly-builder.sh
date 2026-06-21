@@ -85,25 +85,25 @@ PROJECT CONTEXT:
 YOUR TASK (Feature #$TASK_NUM):
 $TASK_DESC
 
-INSTRUCTIONS:
-1. Build a complete, testable implementation
-2. For EVERY code file, use EXACTLY this format:
+INSTRUCTIONS - FOLLOW EXACTLY:
+1. For EVERY code file you create, you MUST use this EXACT format:
    [FILE: src/components/MyComponent.js]
    \`\`\`jsx
-   // your code goes here
+   // your code here
    \`\`\`
    
    DO NOT use markdown headers like **MyComponent.js**
-   DO NOT use tildes or absolute paths like ~/... or /Users/.../...
-   DO use relative paths: src/components/, src/pages/, backend/routes/, migrations/
-3. CRITICAL: If you create a React component with CSS, create the CSS file with [FILE: path] marker
-4. Include a README.md with integration steps
-5. Create a SCREENSHOTS.md with code examples or visual descriptions
-6. Make it production-ready: error handling, loading states, accessibility
-7. Reference existing HugBack code style and patterns
-8. Include PropTypes or TypeScript types
-9. Mobile-first responsive design
-10. CRITICAL: Every code file MUST start with [FILE: path/to/file] marker before the code block
+   DO NOT use bold or italics for file names
+   DO NOT use tildes (~) or absolute paths in file paths
+   DO NOT skip the [FILE:] marker - without it your code will NOT be extracted
+2. For CSS files: [FILE: src/components/MyComponent.css]
+3. For backend files: [FILE: backend/routes/api.js]
+4. Include a [FILE: README.md] with integration steps
+5. Make it production-ready: error handling, loading states, accessibility
+6. Reference existing HugBack code style and patterns
+7. Mobile-first responsive design
+
+CRITICAL: The [FILE: path] marker must appear BEFORE the code block, on its own line. The extractor looks for this exact pattern.
 
 Start building now! Output complete, working code."
     ;;
@@ -119,14 +119,23 @@ PROJECT CONTEXT:
 YOUR TASK (Project #$TASK_NUM):
 $TASK_DESC
 
-INSTRUCTIONS:
-1. Build a complete, practical implementation
-2. Save all files using: [FILE: path/to/filename.js] format
-3. Include a README.md with what you built and how to use it
-4. Make it useful: Ben will actually use this
-5. Include examples or templates if applicable
-6. If it's a tracker/dashboard, include sample data
-7. Keep it focused and lightweight
+INSTRUCTIONS - FOLLOW EXACTLY:
+1. For EVERY file you create, you MUST use this EXACT format:
+   [FILE: relative/path/to/filename.js]
+   \`\`\`javascript
+   // your code here
+   \`\`\`
+   
+   DO NOT use markdown headers like **MyFile.js**
+   DO NOT use bold or italics for file names
+   DO NOT use tildes (~) or absolute paths in file paths
+   DO NOT skip the [FILE:] marker - without it, your code will NOT be extracted
+2. Include a [FILE: README.md] with what you built and how to use it
+3. Include sample data if it's a tracker or dashboard
+4. Make it genuinely useful - Ben will actually use this
+5. Keep it focused and practical
+
+CRITICAL: The [FILE: path] marker must appear BEFORE the code block, on its own line. The extractor looks for this exact pattern.
 
 Start building now! Output complete, practical code."
     ;;
